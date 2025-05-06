@@ -79,17 +79,18 @@ export class MainApp extends LitElement {
     @media (max-width: 900px) {
       ul.nav-links {
         flex-direction: column;
-
+        justify-content: space-between;
         gap: 1rem;
         font-size: 2rem;
+        display: flex;
       }
 
       .nav-container {
         padding: 0 1rem;
+        align-items: stretch;
       }
       #home-wrapper a {
         font-size: 2.5rem;
-        margin: 0 2rem;
       }
     }
 
