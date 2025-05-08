@@ -13,9 +13,10 @@ export class EntryPage extends LitElement {
 
     return html`
       <div class="content">
+        <h1>Annie & Lucas</h1>
         <form @submit="${this._handleSubmit}">
           <label for="firstAndLast" class="centered-label"
-            >Enter your first and last name</label
+            >Enter your first & last name</label
           >
           <input id="firstAndLast" type="text" required />
           <button type="submit">Submit</button>
@@ -34,13 +35,11 @@ export class EntryPage extends LitElement {
   private _handleSubmit(e: Event) {
     e.preventDefault();
     this.classList.add("fade-out");
-    setTimeout(() => {
-      const input = this.shadowRoot?.querySelector(
-        "#firstAndLast"
-      ) as HTMLInputElement;
-      localStorage.setItem("firstAndLast", input.value.toLowerCase());
-      window.location.reload();
-    }, 2000);
+    const input = this.shadowRoot?.querySelector(
+      "#firstAndLast"
+    ) as HTMLInputElement;
+    localStorage.setItem("firstAndLast", input.value.toLowerCase());
+    window.location.reload();
   }
 
   static styles = css`
@@ -61,6 +60,14 @@ export class EntryPage extends LitElement {
       margin: 0;
       padding: 0;
       transition: background-image 2s;
+    }
+    content {
+      width: 30vw;
+    }
+    h1 {
+      text-align: center;
+      font-size: 4rem;
+      font-weight: 1000;
     }
 
     .fade-out {
@@ -83,7 +90,6 @@ export class EntryPage extends LitElement {
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      width: 30vw;
       margin: 0 auto;
     }
 
@@ -93,13 +99,12 @@ export class EntryPage extends LitElement {
       background-color: #ab99af;
       border-radius: 8px;
       border: 3px solid #808080;
-      width: 30vw;
       margin: 1rem auto;
       color: #606060;
     }
 
     label {
-      font-size: 1.2rem;
+      font-size: 2rem;
       text-align: center;
     }
 
@@ -115,10 +120,10 @@ export class EntryPage extends LitElement {
       font-family: inherit;
     }
     @media (max-width: 900px) {
-      form {
-        width: 60vw;
+      h1 {
+        font-size: 2.5rem;
       }
-      label {
+      content {
         width: 60vw;
       }
     }
