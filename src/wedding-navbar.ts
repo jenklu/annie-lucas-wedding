@@ -15,7 +15,7 @@ export class WeddingNavbar extends LitElement {
           <ul class="nav-links nav-left">
             <li><a href="#">Bride & Groom</a></li>
             <li><a href="#">Wedding Party</a></li>
-            <li><a href="#">Photos</a></li>
+            <li><a href="/engagement-photos">Photos</a></li>
           </ul>
 
           <ul class="nav-links nav-right">

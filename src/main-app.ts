@@ -1,8 +1,11 @@
 import { LitElement, css, html } from "lit";
 import { customElement, state } from "lit/decorators.js";
 import "./wedding-navbar";
+import "./home-page";
 import "./entry-page";
 import "./main.css";
+import { HomePage } from "./home-page";
+import { EngagementPhotos } from "./enagement-photos";
 
 async function hash(input: string) {
   const encoder = new TextEncoder();
@@ -36,6 +39,19 @@ export class MainApp extends LitElement {
       (hashed: string) => (this._isLoggedIn = hashedNames.includes(hashed))
     );
   }
+
+  loggedInRoute(): LitElement {
+    switch (location.pathname) {
+      case "/engagement-photos":
+        history.replaceState(null, "", location.origin + "/engagement-photos");
+        return new EngagementPhotos();
+      case "/":
+      case "/home":
+      default:
+        history.pushState(null, "", location.origin + "/home");
+        return new HomePage();
+    }
+  }
   render() {
     console.log(`isLoggedIn: ${this._isLoggedIn}`);
     if (this._isLoggedIn == null) {
@@ -47,71 +63,9 @@ export class MainApp extends LitElement {
       history.replaceState(null, "", location.origin);
       return html`<entry-page class="fade-in"></entry-page>`;
     }
-    return html` <wedding-navbar></wedding-navbar>
-      <dialog id="venue-dialog">
-        <div>
-          <p>
-            Annie's great grandfather bought Deer Park Villa for her great
-            grandmother 88 years ago. It has been run by her family ever since,
-            for many years as an Italian restaurant and now as a wedding venue.
-          </p>
-          <p>
-            Her grandfather ran the restaurant for many years and lived his
-            whole life in a house on the property. Annie's mother was born and
-            raised at Deer Park. Annie spent many years running around with
-            Fairfax kids at Deer Park while her parents were at work in Novato.
-          </p>
-          <p>
-            Her Cousin Mike still runs the property as a wedding venue and
-            brings the family together for a big Thanksgiving meal every year.
-          </p>
-          <button
-            style="font-size: 1.5rem"
-            @click="${() => {
-              const dialog = this.shadowRoot?.getElementById(
-                "venue-dialog"
-              ) as HTMLDialogElement | null;
-              dialog?.close();
-            }}"
-          >
-            Close
-          </button>
-        </div>
-      </dialog>
-      <span id="wedding-info" class="fade-in">
-        <h1>Annie Thornton & Lucas Jenkins</h1>
-        <h4>June 20, 2026</h4>
-        <h4>
-          <button
-            id="venue-button"
-            @click="${() => {
-              const dialog = this.shadowRoot?.getElementById(
-                "venue-dialog"
-              ) as HTMLDialogElement | null;
-              dialog?.showModal();
-            }}"
-          >
-            Deer Park Villa
-          </button>
-          <br />
-          Fairfax, California
-        </h4>
-      </span>`;
+    return html` <span id="main-app"> ${this.loggedInRoute()} </span> `;
   }
-
   static styles = css`
-    :host {
-      display: block;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-    }
-
-    .fade-in {
-      opacity: 0;
-      animation: fadeIn 1s ease-in forwards;
-    }
-
     @keyframes fadeIn {
       from {
         opacity: 0;
@@ -121,7 +75,11 @@ export class MainApp extends LitElement {
       }
     }
 
-    :host(.logged-in) {
+    #main-app {
+      display: block;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
       background-image: url(/home-background.jpg);
       background-size: cover;
       background-position: center;
@@ -129,44 +87,6 @@ export class MainApp extends LitElement {
       transition: background-image 2s;
       opacity: 0;
       animation: fadeIn 1s ease-in forwards;
-    }
-
-    #wedding-info {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      height: 80vh;
-    }
-
-    #wedding-info h1 {
-      font-size: 4rem;
-      margin: 0;
-    }
-
-    #wedding-info h4 {
-      font-size: 2rem;
-      margin: 0.5rem 0;
-    }
-
-    button {
-      color: inherit;
-      font-family: inherit;
-      font-size: inherit;
-      background-color: #ab99af;
-      border-radius: 5px;
-      border: none;
-      padding: 0.2em 0.5em;
-      cursor: pointer;
-    }
-    p {
-      font-size: 1.5rem;
-    }
-    #venue-dialog {
-      padding: 2rem;
-      max-width: 600px;
-      text-align: center;
     }
   `;
 }
