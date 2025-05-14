@@ -1,7 +1,7 @@
 import { LitElement, css, html } from "lit";
 import { customElement } from "lit/decorators.js";
 import "./wedding-navbar";
-import "./entry-page";
+import { buttonStyles } from "./button-styles.ts";
 import "./main.css";
 
 /**
@@ -11,8 +11,7 @@ import "./main.css";
 @customElement("home-page")
 export class HomePage extends LitElement {
   render() {
-    return html` <wedding-navbar></wedding-navbar>
-      <dialog id="venue-dialog">
+    return html` <dialog id="venue-dialog">
         <div>
           <p>
             Annie's great grandfather bought Deer Park Villa for her great
@@ -63,7 +62,7 @@ export class HomePage extends LitElement {
       </span>`;
   }
 
-  static styles = css`
+  static localStyles = css`
     @keyframes fadeIn {
       from {
         opacity: 0;
@@ -102,16 +101,6 @@ export class HomePage extends LitElement {
       margin: 0.5rem 0;
     }
 
-    button {
-      color: inherit;
-      font-family: inherit;
-      font-size: inherit;
-      background-color: #ab99af;
-      border-radius: 5px;
-      border: none;
-      padding: 0.2em 0.5em;
-      cursor: pointer;
-    }
     p {
       font-size: 1.5rem;
     }
@@ -119,8 +108,20 @@ export class HomePage extends LitElement {
       padding: 2rem;
       max-width: 600px;
       text-align: center;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 900px) {
+      #venue-dialog {
+        padding: 1rem;
+        max-width: 85vw;
+      }
+      #wedding-info {
+        height: auto;
+      }
     }
   `;
+  static styles = [buttonStyles, HomePage.localStyles];
 }
 
 declare global {

@@ -6,6 +6,7 @@ import "./entry-page";
 import "./main.css";
 import { HomePage } from "./home-page";
 import { EngagementPhotos } from "./enagement-photos";
+import { SchedulePage } from "./schedule-page";
 
 async function hash(input: string) {
   const encoder = new TextEncoder();
@@ -43,7 +44,6 @@ export class MainApp extends LitElement {
   loggedInRoute(): LitElement {
     switch (location.pathname) {
       case "/engagement-photos":
-        history.replaceState(null, "", location.origin + "/engagement-photos");
         return new EngagementPhotos();
       case "/":
       case "/home":
@@ -63,7 +63,13 @@ export class MainApp extends LitElement {
       history.replaceState(null, "", location.origin);
       return html`<entry-page class="fade-in"></entry-page>`;
     }
-    return html` <span id="main-app"> ${this.loggedInRoute()} </span> `;
+    return html`
+      <span id="main-app">
+        <wedding-navbar></wedding-navbar>
+        <img id="fixed-background-image" src="/home-background.jpg" />
+        ${this.loggedInRoute()}
+      </span>
+    `;
   }
   static styles = css`
     @keyframes fadeIn {
@@ -75,18 +81,14 @@ export class MainApp extends LitElement {
       }
     }
 
-    #main-app {
-      display: block;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      background-image: url(/home-background.jpg);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      transition: background-image 2s;
-      opacity: 0;
-      animation: fadeIn 1s ease-in forwards;
+    #fixed-background-image {
+      position: fixed;
+      inset: 0;
+      height: 100vh;
+      width: 100vw;
+      object-fit: cover;
+      z-index: -1;
+      animation: fadeIn 2s ease-in forwards;
     }
   `;
 }

@@ -17,7 +17,7 @@ export class WeddingNavbar extends LitElement {
             <li><a href="#">Wedding Party</a></li>
             <li><a href="/engagement-photos">Photos</a></li>
           </ul>
-
+          <a href="/home">Home</a>
           <ul class="nav-links nav-right">
             <li><a href="#">RSVP</a></li>
             <li><a href="#">Travel Info</a></li>
@@ -25,7 +25,6 @@ export class WeddingNavbar extends LitElement {
           </ul>
         </div>
       </nav>
-      <slot></slot>
     `;
   }
 
@@ -42,6 +41,10 @@ export class WeddingNavbar extends LitElement {
       & a {
         text-decoration: none;
         color: white;
+        font-size: 2.5rem;
+      }
+      & a:active {
+        color: white;
       }
     }
 
@@ -52,24 +55,13 @@ export class WeddingNavbar extends LitElement {
       display: flex;
       flex: 1;
       justify-content: space-evenly;
-      font-size: 2.5rem;
-    }
-
-    #home-wrapper {
-      text-align: center;
-    }
-
-    #home-wrapper a {
-      font-size: 3.5rem;
-      margin: 0 2rem;
     }
 
     @media (max-width: 900px) {
       ul.nav-links {
         flex-direction: column;
         justify-content: space-between;
-        gap: 1rem;
-        font-size: 2rem;
+        gap: 1.5rem;
         display: flex;
         flex-grow: 0;
       }
@@ -79,11 +71,11 @@ export class WeddingNavbar extends LitElement {
         justify-content: space-between;
         width: 92vw;
         margin: auto;
-      }
-
-      #home-wrapper a {
-        font-size: 2.5rem;
-        margin: 0;
+        & a {
+          text-decoration: none;
+          color: white;
+          font-size: 1.75rem;
+        }
       }
     }
   `;

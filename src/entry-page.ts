@@ -1,5 +1,6 @@
 import { LitElement, css, html } from "lit";
 import { customElement } from "lit/decorators.js";
+import { buttonStyles } from "./button-styles.ts";
 
 /**
  * The sign in page for the app
@@ -42,7 +43,7 @@ export class EntryPage extends LitElement {
     window.location.reload();
   }
 
-  static styles = css`
+  static localStyles = css`
     :host {
       display: flex;
       flex-direction: column;
@@ -116,8 +117,6 @@ export class EntryPage extends LitElement {
     button {
       padding: 0.5rem;
       font-size: 1rem;
-      cursor: pointer;
-      font-family: inherit;
     }
     @media (max-width: 900px) {
       h1 {
@@ -128,6 +127,7 @@ export class EntryPage extends LitElement {
       }
     }
   `;
+  static styles = [buttonStyles, EntryPage.localStyles];
 }
 
 declare global {
