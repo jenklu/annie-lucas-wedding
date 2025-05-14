@@ -17,11 +17,11 @@ export class WeddingNavbar extends LitElement {
             <li><a href="#">Wedding Party</a></li>
             <li><a href="/engagement-photos">Photos</a></li>
           </ul>
-          <a href="/home">Home</a>
+          <a id="home" href="/home">Home</a>
           <ul class="nav-links nav-right">
             <li><a href="#">RSVP</a></li>
             <li><a href="#">Travel Info</a></li>
-            <li><a href="#">Schedule</a></li>
+            <li><a href="/schedule">Schedule</a></li>
           </ul>
         </div>
       </nav>
@@ -46,6 +46,13 @@ export class WeddingNavbar extends LitElement {
       & a:active {
         color: white;
       }
+    }
+
+    #home {
+      border: 2px solid white;
+      border-radius: 5px;
+      height: fit-content;
+      padding: 1rem;
     }
 
     ul.nav-links {

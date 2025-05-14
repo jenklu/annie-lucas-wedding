@@ -153,6 +153,7 @@ export class EngagementPhotos extends LitElement {
       height: auto;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
     }
 
     @media (max-width: 500px) {

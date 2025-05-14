@@ -25,6 +25,10 @@ async function hash(input: string) {
 export class MainApp extends LitElement {
   @state()
   private _isLoggedIn: boolean | null = null;
+
+  @state()
+  private _invitedEvents: Array<string> | "all" = [];
+
   connectedCallback() {
     super.connectedCallback();
     const firstAndLastName = localStorage.getItem("firstAndLast");
@@ -32,19 +36,27 @@ export class MainApp extends LitElement {
       this._isLoggedIn = false;
       return;
     }
-    const hashedNames = [
-      "9f424d960f9d13b30a5ca714c566fd7e23c2bf9bad6af9f56cdac6ac3ba2d7cf",
-      "91035d246c53b319938341b25d8cdd123bde586df097f17d379f14d9f5405651",
-    ];
-    hash(firstAndLastName).then(
-      (hashed: string) => (this._isLoggedIn = hashedNames.includes(hashed))
-    );
+    const hashedNames: Record<string, Array<string> | "all"> = {
+      "9f424d960f9d13b30a5ca714c566fd7e23c2bf9bad6af9f56cdac6ac3ba2d7cf": "all",
+      "91035d246c53b319938341b25d8cdd123bde586df097f17d379f14d9f5405651": [
+        "welcome-party",
+        "wedding",
+      ],
+    };
+    hash(firstAndLastName).then((hashed: string) => {
+      this._isLoggedIn = Object.keys(hashedNames).includes(hashed);
+      this._invitedEvents = hashedNames[hashed];
+    });
   }
 
   loggedInRoute(): LitElement {
     switch (location.pathname) {
       case "/engagement-photos":
         return new EngagementPhotos();
+      case "/schedule":
+        const sched = new SchedulePage();
+        sched.invitedEvents = this._invitedEvents;
+        return sched;
       case "/":
       case "/home":
       default:
@@ -66,7 +78,11 @@ export class MainApp extends LitElement {
     return html`
       <span id="main-app">
         <wedding-navbar></wedding-navbar>
-        <img id="fixed-background-image" src="/home-background.jpg" />
+        <img
+          id="fixed-background-image"
+          src="/home-background.jpg"
+          alt="Stylized watercolor image of Deer Park Villa set up for a wedding with altar"
+        />
         ${this.loggedInRoute()}
       </span>
     `;
@@ -88,7 +104,7 @@ export class MainApp extends LitElement {
       width: 100vw;
       object-fit: cover;
       z-index: -1;
-      animation: fadeIn 2s ease-in forwards;
+      animation: fadeIn 1s ease-in forwards;
     }
   `;
 }
