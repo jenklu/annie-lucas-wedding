@@ -1,8 +1,9 @@
 import { LitElement, css, html } from "lit";
-import { customElement } from "lit/decorators.js";
+import { customElement, state } from "lit/decorators.js";
 import "./wedding-navbar";
 import "./entry-page";
 import "./main.css";
+import { buttonStyles } from "./button-styles.ts";
 
 const IMAGE_PATH = "/engagement-photos/";
 
@@ -84,9 +85,40 @@ const allImageNames: string[] = [
  */
 @customElement("engagement-photos")
 export class EngagementPhotos extends LitElement {
+  @state()
+  private openImage: string = "";
   render() {
     return html`
-      <wedding-navbar></wedding-navbar>
+      <dialog
+        id="img-dialog"
+        @click="${(e: MouseEvent) => {
+          const dialog = e.currentTarget as HTMLDialogElement;
+          const rect = dialog.getBoundingClientRect();
+          const clickInside =
+            e.clientX >= rect.left &&
+            e.clientX <= rect.right &&
+            e.clientY >= rect.top &&
+            e.clientY <= rect.bottom;
+
+          if (!clickInside) {
+            dialog.close();
+          }
+        }}"
+      >
+        <img src="${IMAGE_PATH}${this.openImage}" alt="${this.openImage}" />
+        <button
+          style="font-size: 1.5rem"
+          @click="${() => {
+            this.openImage = "";
+            const dialog = this.shadowRoot?.getElementById(
+              "img-dialog"
+            ) as HTMLDialogElement | null;
+            dialog?.close();
+          }}"
+        >
+          Close
+        </button>
+      </dialog>
       <div class="photo-grid">
         ${allImageNames.map(
           (fileName) => html`
@@ -94,6 +126,13 @@ export class EngagementPhotos extends LitElement {
               src="${IMAGE_PATH}${fileName}"
               alt="${fileName}"
               loading="lazy"
+              @click="${() => {
+                const dialog = this.shadowRoot?.getElementById(
+                  "img-dialog"
+                ) as HTMLDialogElement | null;
+                this.openImage = fileName;
+                dialog?.showModal();
+              }}"
             />
           `
         )}
@@ -101,7 +140,7 @@ export class EngagementPhotos extends LitElement {
     `;
   }
 
-  static styles = css`
+  static localStyles = css`
     .photo-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
@@ -121,7 +160,14 @@ export class EngagementPhotos extends LitElement {
         grid-template-columns: repeat(auto-fill, 100%);
       }
     }
+    #img-dialog {
+      width: 90vw;
+      & img {
+        width: 100%;
+      }
+    }
   `;
+  static styles = [buttonStyles, EngagementPhotos.localStyles];
 }
 
 declare global {
