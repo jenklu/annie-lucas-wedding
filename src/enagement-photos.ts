@@ -1,11 +1,10 @@
 import { LitElement, css, html } from "lit";
-import { customElement, state } from "lit/decorators.js";
+import { customElement } from "lit/decorators.js";
 import "./wedding-navbar";
 import "./entry-page";
 import "./main.css";
 
 const IMAGE_PATH = "/engagement-photos/";
-const IMAGES_PER_LOAD = 10;
 
 const allImageNames: string[] = [
   "DSC00784-AH Portraits.jpg",
@@ -85,45 +84,11 @@ const allImageNames: string[] = [
  */
 @customElement("engagement-photos")
 export class EngagementPhotos extends LitElement {
-  @state()
-  private _imageFiles: string[] = [];
-
-  @state()
-  private _loadedImagesCount = IMAGES_PER_LOAD;
-
-  connectedCallback() {
-    super.connectedCallback();
-    this._imageFiles = allImageNames.slice(0, this._loadedImagesCount);
-    window.addEventListener("scroll", this._handleScroll);
-  }
-
-  disconnectedCallback() {
-    super.disconnectedCallback();
-    window.removeEventListener("scroll", this._handleScroll);
-  }
-
-  private _handleScroll = () => {
-    if (
-      window.innerHeight + window.scrollY >= document.body.offsetHeight - 200 && // 200px buffer
-      this._loadedImagesCount < allImageNames.length
-    ) {
-      this._loadMoreImages();
-    }
-  };
-
-  private _loadMoreImages() {
-    this._loadedImagesCount = Math.min(
-      allImageNames.length,
-      this._loadedImagesCount + IMAGES_PER_LOAD
-    );
-    this._imageFiles = allImageNames.slice(0, this._loadedImagesCount);
-  }
-
   render() {
     return html`
       <wedding-navbar></wedding-navbar>
       <div class="photo-grid">
-        ${this._imageFiles.map(
+        ${allImageNames.map(
           (fileName) => html`
             <img
               src="${IMAGE_PATH}${fileName}"
@@ -139,7 +104,7 @@ export class EngagementPhotos extends LitElement {
   static styles = css`
     .photo-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
       gap: 10px;
       padding: 10px;
     }
@@ -148,7 +113,13 @@ export class EngagementPhotos extends LitElement {
       width: 100%;
       height: auto;
       border-radius: 8px;
-      //box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 500px) {
+      .photo-grid {
+        grid-template-columns: repeat(auto-fill, 100%);
+      }
     }
   `;
 }
