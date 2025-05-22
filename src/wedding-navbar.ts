@@ -15,13 +15,13 @@ export class WeddingNavbar extends LitElement {
           <ul class="nav-links nav-left">
             <li><a href="#">Bride & Groom</a></li>
             <li><a href="#">Wedding Party</a></li>
-            <li><a href="/engagement-photos">Photos</a></li>
+            <li><a href="#/engagement-photos">Photos</a></li>
           </ul>
-          <a id="home" href="/home">Home</a>
+          <a id="home" href="/#home">Home</a>
           <ul class="nav-links nav-right">
             <li><a href="#">RSVP</a></li>
             <li><a href="#">Travel Info</a></li>
-            <li><a href="/schedule">Schedule</a></li>
+            <li><a href="#/schedule">Schedule</a></li>
           </ul>
         </div>
       </nav>

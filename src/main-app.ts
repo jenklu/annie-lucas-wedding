@@ -29,6 +29,13 @@ export class MainApp extends LitElement {
   @state()
   private _invitedEvents: Array<string> | "all" = [];
 
+  @state()
+  private _currentHash: string = location.hash;
+
+  private _onHashChange = () => {
+    this._currentHash = location.hash;
+  };
+
   connectedCallback() {
     super.connectedCallback();
     const firstAndLastName = localStorage.getItem("firstAndLast");
@@ -47,20 +54,29 @@ export class MainApp extends LitElement {
       this._isLoggedIn = Object.keys(hashedNames).includes(hashed);
       this._invitedEvents = hashedNames[hashed];
     });
+
+    // For hash routing, unrelated to name hashing (lol)
+    window.addEventListener("hashchange", this._onHashChange);
+  }
+
+  disconnectedCallback(): void {
+    window.removeEventListener("hashchange", this._onHashChange);
+
+    super.disconnectedCallback();
   }
 
   loggedInRoute(): LitElement {
-    switch (location.pathname) {
-      case "/engagement-photos":
+    switch (this._currentHash) {
+      case "#/engagement-photos":
         return new EngagementPhotos();
-      case "/schedule":
+      case "#/schedule":
         const sched = new SchedulePage();
         sched.invitedEvents = this._invitedEvents;
         return sched;
-      case "/":
-      case "/home":
+      case "":
+      case "#/home":
       default:
-        history.pushState(null, "", location.origin + "/home");
+        history.pushState(null, "", location.origin + "#/home");
         return new HomePage();
     }
   }
