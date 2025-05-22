@@ -1,5 +1,6 @@
 import { LitElement, css, html } from 'lit';
 import { customElement } from 'lit/decorators.js';
+import './tooltip';
 
 /**
  * The navbar for the app
@@ -13,14 +14,30 @@ export class WeddingNavbar extends LitElement {
       <nav>
         <div class="nav-container">
           <ul class="nav-links nav-left">
-            <li><a href="#">Bride & Groom</a></li>
-            <li><a href="#">Wedding Party</a></li>
+            <li>
+              <lucas-tooltip text="Coming soon..."
+                ><a href="${location.hash}">Bride & Groom</a></lucas-tooltip
+              >
+            </li>
+            <li>
+              <lucas-tooltip text="Coming soon..."
+                ><a href="${location.hash}">Wedding Party</a></lucas-tooltip
+              >
+            </li>
             <li><a href="#/engagement-photos">Photos</a></li>
           </ul>
-          <a id="home" href="/#home">Home</a>
+          <a id="home" href="#/home">Home</a>
           <ul class="nav-links nav-right">
-            <li><a href="#">RSVP</a></li>
-            <li><a href="#">Travel Info</a></li>
+            <li>
+              <lucas-tooltip text="Coming soon..."
+                ><a href="${location.hash}">RSVP</a></lucas-tooltip
+              >
+            </li>
+            <li>
+              <lucas-tooltip text="Coming soon..."
+                ><a href="${location.hash}">Travel Info</a></lucas-tooltip
+              >
+            </li>
             <li><a href="#/schedule">Schedule</a></li>
           </ul>
         </div>
