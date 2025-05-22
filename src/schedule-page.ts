@@ -17,19 +17,19 @@ export class SchedulePage extends LitElement {
     {
       slug: 'rehearsal-dinner',
       title: 'Rehearsal Dinner',
-      time: 'TBD early evening, Friday June 19th, 2026',
-      location: 'TBD, San Rafael',
+      time: 'TBA early evening, Friday June 19th, 2026',
+      location: 'TBA, San Rafael',
     },
     {
       slug: 'welcome-party',
       title: 'Welcome Party',
-      time: 'TBD evening, Friday June 19th, 2026',
-      location: 'TBD, San Rafael',
+      time: 'TBA evening, Friday June 19th, 2026',
+      location: 'TBA, San Rafael',
     },
     {
       slug: 'wedding',
       title: 'Wedding',
-      time: 'TBD, Saturday June 20th, 2026',
+      time: 'TBA, Saturday June 20th, 2026',
       location: html`<a
         href="https://maps.app.goo.gl/6dA7DkMBPako2Hr58"
         target="_blank"
@@ -40,8 +40,8 @@ export class SchedulePage extends LitElement {
     {
       slug: 'brunch',
       title: 'Brunch',
-      time: 'TBD Late Morning, Sunday June 21st, 2026',
-      location: 'TBD, San Rafael',
+      time: 'TBA Late Morning, Sunday June 21st, 2026',
+      location: 'TBA, San Rafael',
     },
   ];
 

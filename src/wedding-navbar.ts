@@ -15,6 +15,9 @@ export class WeddingNavbar extends LitElement {
         <div class="nav-container">
           <ul class="nav-links nav-left">
             <li>
+              <a id="home" href="#/home">Home</a>
+            </li>
+            <li>
               <lucas-tooltip text="Coming soon..."
                 ><a href="${location.hash}">Bride & Groom</a></lucas-tooltip
               >
@@ -26,7 +29,7 @@ export class WeddingNavbar extends LitElement {
             </li>
             <li><a href="#/engagement-photos">Photos</a></li>
           </ul>
-          <a id="home" href="#/home">Home</a>
+
           <ul class="nav-links nav-right">
             <li>
               <lucas-tooltip text="Coming soon..."
@@ -39,6 +42,11 @@ export class WeddingNavbar extends LitElement {
               >
             </li>
             <li><a href="#/schedule">Schedule</a></li>
+            <li>
+              <lucas-tooltip text="Coming soon..."
+                ><a href="${location.hash}">Registry</a></lucas-tooltip
+              >
+            </li>
           </ul>
         </div>
       </nav>
@@ -51,6 +59,7 @@ export class WeddingNavbar extends LitElement {
     }
 
     .nav-container {
+      margin: 2rem auto 2rem auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -66,10 +75,10 @@ export class WeddingNavbar extends LitElement {
     }
 
     #home {
-      border: 2px solid white;
       border-radius: 5px;
       height: fit-content;
       padding: 1rem;
+      background: rgba(255, 255, 255, 0.3);
     }
 
     ul.nav-links {
@@ -94,7 +103,6 @@ export class WeddingNavbar extends LitElement {
         align-items: stretch;
         justify-content: space-between;
         width: 92vw;
-        margin: auto;
         & a {
           text-decoration: none;
           color: white;
