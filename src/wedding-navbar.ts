@@ -1,12 +1,12 @@
-import { LitElement, css, html } from "lit";
-import { customElement } from "lit/decorators.js";
+import { LitElement, css, html } from 'lit';
+import { customElement } from 'lit/decorators.js';
 
 /**
  * The navbar for the app
  *
  * @slot - This element has a slot
  */
-@customElement("wedding-navbar")
+@customElement('wedding-navbar')
 export class WeddingNavbar extends LitElement {
   render() {
     return html`
@@ -90,6 +90,6 @@ export class WeddingNavbar extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "wedding-navbar": WeddingNavbar;
+    'wedding-navbar': WeddingNavbar;
   }
 }

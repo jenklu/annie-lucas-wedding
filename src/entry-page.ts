@@ -1,45 +1,39 @@
-import { LitElement, css, html } from "lit";
-import { customElement } from "lit/decorators.js";
-import { buttonStyles } from "./button-styles.ts";
+import { LitElement, css, html } from 'lit';
+import { customElement } from 'lit/decorators.js';
+import { buttonStyles } from './button-styles.ts';
 
 /**
  * The sign in page for the app
  *
  * @slot - This element has a slot
  */
-@customElement("entry-page")
+@customElement('entry-page')
 export class EntryPage extends LitElement {
   render() {
-    const existingFirstAndLast = localStorage.getItem("firstAndLast");
+    const existingFirstAndLast = localStorage.getItem('firstAndLast');
 
     return html`
       <div class="content">
         <h1>Annie & Lucas</h1>
         <form @submit="${this._handleSubmit}">
-          <label for="firstAndLast" class="centered-label"
-            >Enter your first & last name</label
-          >
+          <label for="firstAndLast" class="centered-label">Enter your first & last name</label>
           <input id="firstAndLast" type="text" required />
           <button type="submit">Submit</button>
         </form>
         ${existingFirstAndLast
           ? html`
-              <div class="error">
-                Sorry, the name ${existingFirstAndLast} is not recognized
-              </div>
+              <div class="error">Sorry, the name ${existingFirstAndLast} is not recognized</div>
             `
-          : ""}
+          : ''}
       </div>
     `;
   }
 
   private _handleSubmit(e: Event) {
     e.preventDefault();
-    this.classList.add("fade-out");
-    const input = this.shadowRoot?.querySelector(
-      "#firstAndLast"
-    ) as HTMLInputElement;
-    localStorage.setItem("firstAndLast", input.value.toLowerCase());
+    this.classList.add('fade-out');
+    const input = this.shadowRoot?.querySelector('#firstAndLast') as HTMLInputElement;
+    localStorage.setItem('firstAndLast', input.value.toLowerCase());
     window.location.reload();
   }
 
@@ -132,6 +126,6 @@ export class EntryPage extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "entry-page": EntryPage;
+    'entry-page': EntryPage;
   }
 }

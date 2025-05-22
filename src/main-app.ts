@@ -1,33 +1,33 @@
-import { LitElement, css, html } from "lit";
-import { customElement, state } from "lit/decorators.js";
-import "./wedding-navbar";
-import "./home-page";
-import "./entry-page";
-import "./main.css";
-import { HomePage } from "./home-page";
-import { EngagementPhotos } from "./enagement-photos";
-import { SchedulePage } from "./schedule-page";
+import { LitElement, css, html } from 'lit';
+import { customElement, state } from 'lit/decorators.js';
+import './wedding-navbar';
+import './home-page';
+import './entry-page';
+import './main.css';
+import { HomePage } from './home-page';
+import { EngagementPhotos } from './enagement-photos';
+import { SchedulePage } from './schedule-page';
 
 async function hash(input: string) {
   const encoder = new TextEncoder();
   const data = encoder.encode(input);
-  const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', data);
   return Array.from(new Uint8Array(hashBuffer))
-    .map((b) => b.toString(16).padStart(2, "0"))
-    .join("");
+    .map((b) => b.toString(16).padStart(2, '0'))
+    .join('');
 }
 
 /**
  * The root of the application
  *
  */
-@customElement("main-app")
+@customElement('main-app')
 export class MainApp extends LitElement {
   @state()
   private _isLoggedIn: boolean | null = null;
 
   @state()
-  private _invitedEvents: Array<string> | "all" = [];
+  private _invitedEvents: Array<string> | 'all' = [];
 
   @state()
   private _currentHash: string = location.hash;
@@ -38,16 +38,16 @@ export class MainApp extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
-    const firstAndLastName = localStorage.getItem("firstAndLast");
+    const firstAndLastName = localStorage.getItem('firstAndLast');
     if (firstAndLastName == null) {
       this._isLoggedIn = false;
       return;
     }
-    const hashedNames: Record<string, Array<string> | "all"> = {
-      "9f424d960f9d13b30a5ca714c566fd7e23c2bf9bad6af9f56cdac6ac3ba2d7cf": "all",
-      "91035d246c53b319938341b25d8cdd123bde586df097f17d379f14d9f5405651": [
-        "welcome-party",
-        "wedding",
+    const hashedNames: Record<string, Array<string> | 'all'> = {
+      '9f424d960f9d13b30a5ca714c566fd7e23c2bf9bad6af9f56cdac6ac3ba2d7cf': 'all',
+      '91035d246c53b319938341b25d8cdd123bde586df097f17d379f14d9f5405651': [
+        'welcome-party',
+        'wedding',
       ],
     };
     hash(firstAndLastName).then((hashed: string) => {
@@ -56,27 +56,27 @@ export class MainApp extends LitElement {
     });
 
     // For hash routing, unrelated to name hashing (lol)
-    window.addEventListener("hashchange", this._onHashChange);
+    window.addEventListener('hashchange', this._onHashChange);
   }
 
   disconnectedCallback(): void {
-    window.removeEventListener("hashchange", this._onHashChange);
+    window.removeEventListener('hashchange', this._onHashChange);
 
     super.disconnectedCallback();
   }
 
   loggedInRoute(): LitElement {
     switch (this._currentHash) {
-      case "#/engagement-photos":
+      case '#/engagement-photos':
         return new EngagementPhotos();
-      case "#/schedule":
+      case '#/schedule':
         const sched = new SchedulePage();
         sched.invitedEvents = this._invitedEvents;
         return sched;
-      case "":
-      case "#/home":
+      case '':
+      case '#/home':
       default:
-        history.pushState(null, "", location.origin + "#/home");
+        history.pushState(null, '', location.origin + '#/home');
         return new HomePage();
     }
   }
@@ -85,10 +85,10 @@ export class MainApp extends LitElement {
     if (this._isLoggedIn == null) {
       return;
     }
-    this.classList.toggle("logged-in", this._isLoggedIn);
+    this.classList.toggle('logged-in', this._isLoggedIn);
 
     if (!this._isLoggedIn) {
-      history.replaceState(null, "", location.origin);
+      history.replaceState(null, '', location.origin);
       return html`<entry-page class="fade-in"></entry-page>`;
     }
     return html`
@@ -127,6 +127,6 @@ export class MainApp extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "main-app": MainApp;
+    'main-app': MainApp;
   }
 }

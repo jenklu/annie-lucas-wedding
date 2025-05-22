@@ -1,5 +1,5 @@
-import { LitElement, html, css } from "lit";
-import { customElement, property } from "lit/decorators.js";
+import { LitElement, html, css } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
 
 interface EventInfo {
   slug: string;
@@ -8,28 +8,28 @@ interface EventInfo {
   location: string | ReturnType<typeof html>;
 }
 
-@customElement("schedule-page")
+@customElement('schedule-page')
 export class SchedulePage extends LitElement {
   @property({ type: Array })
-  invitedEvents: Array<string> | "all" = "all";
+  invitedEvents: Array<string> | 'all' = 'all';
 
   private static allEvents: EventInfo[] = [
     {
-      slug: "rehearsal-dinner",
-      title: "Rehearsal Dinner",
-      time: "TBD early evening, Friday June 19th, 2026",
-      location: "TBD, San Rafael",
+      slug: 'rehearsal-dinner',
+      title: 'Rehearsal Dinner',
+      time: 'TBD early evening, Friday June 19th, 2026',
+      location: 'TBD, San Rafael',
     },
     {
-      slug: "welcome-party",
-      title: "Welcome Party",
-      time: "TBD evening, Friday June 19th, 2026",
-      location: "TBD, San Rafael",
+      slug: 'welcome-party',
+      title: 'Welcome Party',
+      time: 'TBD evening, Friday June 19th, 2026',
+      location: 'TBD, San Rafael',
     },
     {
-      slug: "wedding",
-      title: "Wedding",
-      time: "TBD, Saturday June 20th, 2026",
+      slug: 'wedding',
+      title: 'Wedding',
+      time: 'TBD, Saturday June 20th, 2026',
       location: html`<a
         href="https://maps.app.goo.gl/6dA7DkMBPako2Hr58"
         target="_blank"
@@ -38,15 +38,15 @@ export class SchedulePage extends LitElement {
       >`,
     },
     {
-      slug: "brunch",
-      title: "Brunch",
-      time: "TBD Late Morning, Sunday June 21st, 2026",
-      location: "TBD, San Rafael",
+      slug: 'brunch',
+      title: 'Brunch',
+      time: 'TBD Late Morning, Sunday June 21st, 2026',
+      location: 'TBD, San Rafael',
     },
   ];
 
   private isInvited(slug: string): boolean {
-    return this.invitedEvents === "all" || this.invitedEvents.includes(slug);
+    return this.invitedEvents === 'all' || this.invitedEvents.includes(slug);
   }
 
   render() {
@@ -103,6 +103,6 @@ export class SchedulePage extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "schedule-page": SchedulePage;
+    'schedule-page': SchedulePage;
   }
 }

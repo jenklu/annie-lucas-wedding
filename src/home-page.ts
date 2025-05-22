@@ -1,38 +1,37 @@
-import { LitElement, css, html } from "lit";
-import { customElement } from "lit/decorators.js";
-import "./wedding-navbar";
-import { buttonStyles } from "./button-styles.ts";
-import "./main.css";
+import { LitElement, css, html } from 'lit';
+import { customElement } from 'lit/decorators.js';
+import './wedding-navbar';
+import { buttonStyles } from './button-styles.ts';
+import './main.css';
 
 /**
  * The root of the application
  *
  */
-@customElement("home-page")
+@customElement('home-page')
 export class HomePage extends LitElement {
   render() {
     return html` <dialog id="venue-dialog">
         <div>
           <p>
-            Annie's great grandfather bought Deer Park Villa for her great
-            grandmother 88 years ago. It has been run by her family ever since,
-            for many years as an Italian restaurant and now as a wedding venue.
+            Annie's great grandfather bought Deer Park Villa for her great grandmother 88 years ago.
+            It has been run by her family ever since, for many years as an Italian restaurant and
+            now as a wedding venue.
           </p>
           <p>
-            Her grandfather ran the restaurant for many years and lived his
-            whole life in a house on the property. Annie's mother was born and
-            raised at Deer Park. Annie spent many years running around with
-            Fairfax kids at Deer Park while her parents were at work in Novato.
+            Her grandfather ran the restaurant for many years and lived his whole life in a house on
+            the property. Annie's mother was born and raised at Deer Park. Annie spent many years
+            running around with Fairfax kids at Deer Park while her parents were at work in Novato.
           </p>
           <p>
-            Her Cousin Mike still runs the property as a wedding venue and
-            brings the family together for a big Thanksgiving meal every year.
+            Her Cousin Mike still runs the property as a wedding venue and brings the family
+            together for a big Thanksgiving meal every year.
           </p>
           <button
             style="font-size: 1.5rem"
             @click="${() => {
               const dialog = this.shadowRoot?.getElementById(
-                "venue-dialog"
+                'venue-dialog'
               ) as HTMLDialogElement | null;
               dialog?.close();
             }}"
@@ -49,7 +48,7 @@ export class HomePage extends LitElement {
             id="venue-button"
             @click="${() => {
               const dialog = this.shadowRoot?.getElementById(
-                "venue-dialog"
+                'venue-dialog'
               ) as HTMLDialogElement | null;
               dialog?.showModal();
             }}"
@@ -126,6 +125,6 @@ export class HomePage extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "home-page": HomePage;
+    'home-page': HomePage;
   }
 }
