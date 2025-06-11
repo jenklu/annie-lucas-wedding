@@ -67,7 +67,7 @@ export class MainApp extends LitElement {
 
   loggedInRoute(): LitElement {
     switch (this._currentHash) {
-      case '#/engagement-photos':
+      case '#/not-logistics/engagement-photos':
         return new EngagementPhotos();
       case '#/schedule':
         const sched = new SchedulePage();
@@ -76,7 +76,7 @@ export class MainApp extends LitElement {
       case '':
       case '#/home':
       default:
-        history.pushState(null, '', location.origin + '#/home');
+        // For unknown routes, just return home page without forcing redirect
         return new HomePage();
     }
   }
