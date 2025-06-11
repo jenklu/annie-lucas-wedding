@@ -58,7 +58,6 @@ export class WeddingNavbar extends LitElement {
       'dress-code': true,
       travel: true, // parent, actual travel info main page doesn't exist
       lodging: true,
-      'getting-to-marin': true,
       'local-recommendations': true,
       'not-logistics': true, // parent, not-logistics landing doesn't exist
       'bride-groom': true,
@@ -77,7 +76,7 @@ export class WeddingNavbar extends LitElement {
         key: 'travel',
         subtabs: [
           { label: 'Lodging', key: 'lodging' },
-          { label: 'Getting to Marin', key: 'getting-to-marin' },
+          { label: 'Getting There', key: 'getting-there' },
           { label: 'Local Recommendations', key: 'local-recommendations' },
         ],
       },
@@ -210,7 +209,7 @@ export class WeddingNavbar extends LitElement {
     }
 
     .main-tab {
-      background: rgba(255, 255, 255, 0.28);
+      background: darkgrey;
       border-radius: 9px;
       color: white;
       font-size: 2.1rem;
@@ -225,9 +224,8 @@ export class WeddingNavbar extends LitElement {
       user-select: none;
       border: 2px solid transparent;
     }
-    .main-tab.active,
-    .main-tab:focus {
-      background: rgba(255, 255, 255, 0.45);
+    .main-tab.active {
+      background: lightgrey;
       color: #222;
       border-color: #bca;
       font-weight: 500;
@@ -235,7 +233,7 @@ export class WeddingNavbar extends LitElement {
     .main-tab.grouping {
       cursor: pointer;
       opacity: 1;
-      background: rgba(255, 255, 255, 0.33);
+      background: darkgrey
       border: 2px solid transparent;
       font-weight: 500;
       color: #f6f3ef;
@@ -256,7 +254,7 @@ export class WeddingNavbar extends LitElement {
       min-width: 110px;
     }
     .subtab {
-      background: rgba(255, 255, 255, 0.2);
+      background: darkgrey;
       border-radius: 7px;
       color: #f3f3f3;
       font-size: 1.15rem;
@@ -273,7 +271,7 @@ export class WeddingNavbar extends LitElement {
     }
     .subtab.active,
     .subtab:focus {
-      background: rgba(255, 255, 255, 0.39);
+      background: lightgrey;
       color: #252525;
       border-color: #bca;
       font-weight: 500;

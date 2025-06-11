@@ -7,6 +7,7 @@ import './main.css';
 import { HomePage } from './home-page';
 import { EngagementPhotos } from './enagement-photos';
 import { SchedulePage } from './schedule-page';
+import { GettingThere } from './getting-there';
 
 async function hash(input: string) {
   const encoder = new TextEncoder();
@@ -73,6 +74,8 @@ export class MainApp extends LitElement {
         const sched = new SchedulePage();
         sched.invitedEvents = this._invitedEvents;
         return sched;
+      case '#/travel/getting-there':
+        return new GettingThere();
       case '':
       case '#/home':
       default:
