@@ -59,7 +59,7 @@ export class WeddingNavbar extends LitElement {
       travel: true, // parent, actual travel info main page doesn't exist
       lodging: true,
       'local-recommendations': true,
-      'not-logistics': true, // parent, not-logistics landing doesn't exist
+      'people-and-pics': true, // parent, people-and-pics landing doesn't exist
       'bride-groom': true,
       'wedding-party': true,
     };
@@ -72,7 +72,7 @@ export class WeddingNavbar extends LitElement {
       { label: 'Schedule', key: 'schedule' },
       { label: 'Dress Code', key: 'dress-code' },
       {
-        label: 'Travel Info',
+        label: 'Travel',
         key: 'travel',
         subtabs: [
           { label: 'Lodging', key: 'lodging' },
@@ -81,8 +81,8 @@ export class WeddingNavbar extends LitElement {
         ],
       },
       {
-        label: 'Not-Logistics',
-        key: 'not-logistics',
+        label: 'People & Pics',
+        key: 'people-and-pics',
         subtabs: [
           { label: 'Bride & Groom', key: 'bride-groom' },
           { label: 'Wedding Party', key: 'wedding-party' },

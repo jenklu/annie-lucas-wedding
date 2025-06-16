@@ -1,5 +1,6 @@
 import { LitElement, html, css } from 'lit';
 import { customElement } from 'lit/decorators.js';
+import { paragraphStyle } from './styles';
 
 @customElement('getting-there')
 export class GettingThere extends LitElement {
@@ -9,7 +10,7 @@ export class GettingThere extends LitElement {
         <img id="fixed-background-image" src="/travel-background.png" />
         <h1>Getting to Marin</h1>
         <div class="content">
-          For those traveling from out of town, the easiest airports to fly into are:
+          For those flying in for the wedding, the most convenient airports are:
           <ul>
             <li>
               <a href="https://maps.app.goo.gl/KL4C2Sko4GpVMWUA6" target="_blank"
@@ -28,43 +29,58 @@ export class GettingThere extends LitElement {
             </li>
           </ul>
           <p>
-            These airports are roughly a 40-60 minute drive from downtown San Rafael.
+            All of these airports are roughly a 40-60 minute drive from downtown San Rafael.
             <a href="https://maps.app.goo.gl/R3VRAkSydBbWBuhr8" target="_blank"
               >San Jose International Airport</a
             >
-            could also be a reasonable option if the flights are more convenient, it adds 20-30
-            minutes to the drive. The easiest way to get to Marin from the airport is to Uber/Lyft
-            or rent a car.
+            is a reasonable option if the flights are more convenient; it adds about 20-30 minutes
+            to the drive. To get from the airport to Marin, we recommend renting a car or using
+            Uber/Lyft.
           </p>
           <p>
             If you prefer public transportation, the
-            <a href="https://www.marinairporter.com/" target="_blank">Marin Airporter</a> also has
-            service to San Rafael, although it does not stop downtown.
+            <a href="https://www.marinairporter.com/" target="_blank">Marin Airporter</a> has
+            service from SFO to San Rafael, although it does not stop downtown.
+            <a href="https://groometransportation.com/sonoma-county/sfo-oak/"
+              >Groome Transportation</a
+            >
+            has service from the Oakland airport to downtown San Rafael.
           </p>
         </div>
         <h1>Getting to the wedding</h1>
         <div class="content">
           <p>
-            The wedding will be held at
+            The wedding and reception will be at:
+            <br />
             <a
               href="https://maps.app.goo.gl/6dA7DkMBPako2Hr58"
               target="_blank"
               rel="noopener noreferrer"
               >Deer Park Villa</a
-            >, which is located at 367 Bolinas Rd, Fairfax, CA 94930. There will be buses to and
-            from the hotel block in downtown San Rafael to the venue.
+            >
+            <br />
+            367 Bolinas Rd
+            <br />
+            Fairfax, CA 94930.
           </p>
           <p>
-            Fairfax is full of windy roads which can be difficult for out-of-towners to navigate. As
-            such, if you do not plan to take the bus, we encourage you to travel to the wedding via
-            rideshare so we can make the most of our toasts 🥂🍻🍸
+            We are organizing shuttles to and from the hotel block in downtown San Rafael to the
+            venue.
+          </p>
+          <p>
+            If you prefer to find your own way to and from the wedding, Deer Park has a large
+            parking lot which you are welcome to use.
+          </p>
+          <p>
+            For those who plan to partake in our open bar and can't take the shuttle, Fairfax has
+            Uber and Lyft available to get you home.
           </p>
         </div>
       </div>
     `;
   }
 
-  static styles = css`
+  static localStyles = css`
     .page-container {
       display: flex;
       flex-direction: column;
@@ -88,21 +104,11 @@ export class GettingThere extends LitElement {
       z-index: -1;
       animation: fadeIn 1s ease-in forwards;
     }
-    /* :host {
-      background-image: url('/travel-background.png');
-      background-size: cover;
-      background-repeat: no-repeat;
-      display: block;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      z-index: -1;
-    } */
+
     h1 {
       color: #333;
       margin-bottom: 2rem;
+      text-align: center;
     }
 
     .content {
@@ -111,8 +117,11 @@ export class GettingThere extends LitElement {
       border-radius: 5px;
       padding: 1rem;
       width: 75vw;
+      font-family: 'Fogie', sans-serif;
+      font-weight: 300;
     }
   `;
+  static styles = [GettingThere.localStyles, paragraphStyle];
 }
 
 declare global {

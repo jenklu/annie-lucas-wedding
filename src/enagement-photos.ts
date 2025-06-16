@@ -3,7 +3,7 @@ import { customElement, state } from 'lit/decorators.js';
 import './wedding-navbar';
 import './entry-page';
 import './main.css';
-import { buttonStyles } from './button-styles.ts';
+import { buttonStyles } from './styles.ts';
 
 const IMAGE_PATH = '/engagement-photos/';
 

@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
-import './button-styles';
-import { buttonStyles } from './button-styles';
+import './styles';
+import { buttonStyles } from './styles';
 @customElement('lucas-tooltip')
 export class LucasTooltip extends LitElement {
   @property({ type: String }) text = 'Coming soon!';

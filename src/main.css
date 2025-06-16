@@ -1,8 +1,21 @@
+@font-face {
+  font-family: 'Atteron';
+  src: url('./fonts/atteron.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Fogie';
+  src: url('./fonts/fogie.ttf') format('truetype');
+}
+
 body {
   margin: 0;
-  font-family: 'Poiret One', sans-serif;
-  font-weight: 1000;
+  font-family: 'Atteron', sans-serif;
+  font-weight: light;
   font-style: normal;
   color: white;
   font-size: 1.5rem;
+  & h1 {
+    text-align: center;
+  }
 }

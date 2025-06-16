@@ -1,7 +1,7 @@
 import { LitElement, css, html } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import './wedding-navbar';
-import { buttonStyles } from './button-styles.ts';
+import { buttonStyles, paragraphStyle } from './styles.ts';
 import './main.css';
 
 /**
@@ -14,19 +14,18 @@ export class HomePage extends LitElement {
     return html` <dialog id="venue-dialog">
         <div>
           <p>
-            Annie's great grandfather bought Deer Park Villa for her great grandmother 88 years ago.
-            It has been run by her family ever since, for many years as an Italian restaurant and
-            now as a wedding venue.
+            Annie's great-grandparents, Joe and Antoinette Ghiringhelli, held their wedding
+            reception at Deer Park Villa. At the reception, Joe promised to eventually buy the
+            property for Antoinette. In 1937, he fulfilled his promise and Deer Park Villa has been
+            run by the Ghiringhelli family ever since.
           </p>
           <p>
-            Her grandfather ran the restaurant for many years and lived his whole life in a house on
-            the property. Annie's mother was born and raised at Deer Park. Annie spent many years
-            running around with Fairfax kids at Deer Park while her parents were at work in Novato.
+            For many years, Deer Park was open daily as an Italian restaurant. Today, the property
+            is primarily a wedding venue, where couples are married under the redwood trees planted
+            by Grandpa Joe almost 90 years ago. It is run by Annie’s cousin Mike and his sons,
+            representing the 3rd and 4th generation of Ghiringhelli’s to do so.
           </p>
-          <p>
-            Her Cousin Mike still runs the property as a wedding venue and brings the family
-            together for a big Thanksgiving meal every year.
-          </p>
+          <p>We are so excited to share this special place with all of our loved ones.</p>
           <button
             style="font-size: 1.5rem"
             @click="${() => {
@@ -120,7 +119,7 @@ export class HomePage extends LitElement {
       }
     }
   `;
-  static styles = [buttonStyles, HomePage.localStyles];
+  static styles = [buttonStyles, paragraphStyle, HomePage.localStyles];
 }
 
 declare global {

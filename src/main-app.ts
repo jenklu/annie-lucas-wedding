@@ -68,7 +68,7 @@ export class MainApp extends LitElement {
 
   loggedInRoute(): LitElement {
     switch (this._currentHash) {
-      case '#/not-logistics/engagement-photos':
+      case '#/people-and-pics/engagement-photos':
         return new EngagementPhotos();
       case '#/schedule':
         const sched = new SchedulePage();
@@ -84,7 +84,6 @@ export class MainApp extends LitElement {
     }
   }
   render() {
-    console.log(`isLoggedIn: ${this._isLoggedIn}`);
     if (this._isLoggedIn == null) {
       return;
     }

@@ -1,6 +1,6 @@
 import { LitElement, css, html } from 'lit';
 import { customElement } from 'lit/decorators.js';
-import { buttonStyles } from './button-styles.ts';
+import { buttonStyles } from './styles.ts';
 
 /**
  * The sign in page for the app

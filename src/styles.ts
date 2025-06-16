@@ -12,3 +12,11 @@ export const buttonStyles = css`
     cursor: pointer;
   }
 `;
+
+export const paragraphStyle = css`
+  p {
+    font-family: 'fogie', sans-serif;
+    font-weight: 100;
+    text-align: center;
+  }
+`;
