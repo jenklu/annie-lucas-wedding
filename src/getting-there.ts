@@ -10,7 +10,7 @@ export class GettingThere extends LitElement {
         <img id="fixed-background-image" src="/travel-background.png" />
         <h1>Getting to Marin</h1>
         <div class="content">
-          For those flying in for the wedding, the most convenient airports are:
+          <p>For those flying in for the wedding, the most convenient airports are:</p>
           <ul>
             <li>
               <a href="https://maps.app.goo.gl/KL4C2Sko4GpVMWUA6" target="_blank"
@@ -69,11 +69,11 @@ export class GettingThere extends LitElement {
           </p>
           <p>
             If you prefer to find your own way to and from the wedding, Deer Park has a large
-            parking lot which you are welcome to use.
+            parking lot.
           </p>
           <p>
-            For those who plan to partake in our open bar and can't take the shuttle, Fairfax has
-            Uber and Lyft available to get you home.
+            If you plan to partake in our open bar and can't take the shuttle, Fairfax has Uber and
+            Lyft available to get you home.
           </p>
         </div>
       </div>
