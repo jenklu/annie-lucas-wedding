@@ -94,86 +94,84 @@ export class WeddingNavbar extends LitElement {
     return html`
       <nav>
         <div class="nav-container">
-          <div class="tabs-grid">
-            ${NAV.map(
-              (tab) => html`
-                <div class="tabcol">
-                  ${tab.subtabs
-                    ? // If the tab has subtabs, make it toggle the subtabs
+          ${NAV.map(
+            (tab) => html`
+              <div class="tabcol">
+                ${tab.subtabs
+                  ? // If the tab has subtabs, make it toggle the subtabs
+                    html`
+                      <div
+                        class="main-tab grouping ${this._activeTab === tab.key ? 'active' : ''}"
+                        @click="${() => this._toggleSubtabs(tab.key)}"
+                        tabindex="0"
+                        role="button"
+                      >
+                        ${tab.label}
+                      </div>
+                    `
+                  : unfinished[tab.key]
+                    ? // If unfinished, show tooltip
                       html`
-                        <div
-                          class="main-tab grouping ${this._activeTab === tab.key ? 'active' : ''}"
-                          @click="${() => this._toggleSubtabs(tab.key)}"
-                          tabindex="0"
-                          role="button"
-                        >
-                          ${tab.label}
-                        </div>
-                      `
-                    : unfinished[tab.key]
-                      ? // If unfinished, show tooltip
-                        html`
-                          <lucas-tooltip text="Coming soon!">
-                            <div
-                              class="main-tab ${this._activeTab === tab.key ? 'active' : ''}"
-                              @click="${() => this._navigate(tab.key, '', true)}"
-                              tabindex="0"
-                              role="button"
-                            >
-                              ${tab.label}
-                            </div>
-                          </lucas-tooltip>
-                        `
-                      : // Otherwise, it's a working nav item
-                        html`
+                        <lucas-tooltip text="Coming soon!">
                           <div
                             class="main-tab ${this._activeTab === tab.key ? 'active' : ''}"
-                            @click="${() => this._navigate(tab.key)}"
+                            @click="${() => this._navigate(tab.key, '', true)}"
                             tabindex="0"
                             role="button"
                           >
                             ${tab.label}
                           </div>
-                        `}
-                  ${tab.subtabs && this._expandedTabs.has(tab.key)
-                    ? html`
-                        <div class="subtabs-row">
-                          ${tab.subtabs.map((subtab) =>
-                            unfinished[subtab.key]
-                              ? html`
-                                  <lucas-tooltip text="Coming soon!">
-                                    <div
-                                      class="subtab ${this._activeSubtab === subtab.key
-                                        ? 'active'
-                                        : ''}"
-                                      @click="${() => this._navigate(tab.key, subtab.key, true)}"
-                                      tabindex="0"
-                                      role="button"
-                                    >
-                                      ${subtab.label}
-                                    </div>
-                                  </lucas-tooltip>
-                                `
-                              : html`
+                        </lucas-tooltip>
+                      `
+                    : // Otherwise, it's a working nav item
+                      html`
+                        <div
+                          class="main-tab ${this._activeTab === tab.key ? 'active' : ''}"
+                          @click="${() => this._navigate(tab.key)}"
+                          tabindex="0"
+                          role="button"
+                        >
+                          ${tab.label}
+                        </div>
+                      `}
+                ${tab.subtabs && this._expandedTabs.has(tab.key)
+                  ? html`
+                      <div class="subtabs-row">
+                        ${tab.subtabs.map((subtab) =>
+                          unfinished[subtab.key]
+                            ? html`
+                                <lucas-tooltip text="Coming soon!">
                                   <div
                                     class="subtab ${this._activeSubtab === subtab.key
                                       ? 'active'
                                       : ''}"
-                                    @click="${() => this._navigate(tab.key, subtab.key)}"
+                                    @click="${() => this._navigate(tab.key, subtab.key, true)}"
                                     tabindex="0"
                                     role="button"
                                   >
                                     ${subtab.label}
                                   </div>
-                                `
-                          )}
-                        </div>
-                      `
-                    : ''}
-                </div>
-              `
-            )}
-          </div>
+                                </lucas-tooltip>
+                              `
+                            : html`
+                                <div
+                                  class="subtab ${this._activeSubtab === subtab.key
+                                    ? 'active'
+                                    : ''}"
+                                  @click="${() => this._navigate(tab.key, subtab.key)}"
+                                  tabindex="0"
+                                  role="button"
+                                >
+                                  ${subtab.label}
+                                </div>
+                              `
+                        )}
+                      </div>
+                    `
+                  : ''}
+              </div>
+            `
+          )}
         </div>
       </nav>
     `;
@@ -184,28 +182,20 @@ export class WeddingNavbar extends LitElement {
       background: none;
       padding: 1.2rem 0 0 0;
     }
-    .nav-container {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
 
-    .tabs-grid {
+    .nav-container {
       display: flex;
       flex-direction: row;
       justify-content: center;
-      gap: 1.5rem;
-      width: 100%;
-      max-width: 1800px;
+      width: 98vw;
+      margin-left: 1vw
     }
 
     .tabcol {
       display: flex;
       flex-direction: column;
       align-items: center;
-      min-width: 130px;
-      flex: 1 1 0px;
+      flex: 1 1 auto;
     }
 
     .main-tab {
@@ -281,13 +271,13 @@ export class WeddingNavbar extends LitElement {
       pointer-events: none;
     }
 
-    @media (max-width: 900px) {
-      .tabs-grid {
+    @media (max-width: 1270px) {
+      .nav-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 0.9rem 0.5rem;
         width: 98vw;
-        padding: 0 2vw;
+        margin-left: 1vw;
       }
       .tabcol {
         align-items: stretch;
