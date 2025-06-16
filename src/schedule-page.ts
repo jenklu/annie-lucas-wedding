@@ -58,8 +58,8 @@ export class SchedulePage extends LitElement {
             (event) => html`
               <div class="event">
                 <h3>${event.title}</h3>
-                <span><strong>Time:</strong> ${event.time}</span>
-                <span><strong>Location:</strong> ${event.location}</span>
+                <strong>Time:</strong> ${event.time}<br />
+                <strong>Location:</strong> ${event.location}
               </div>
             `
           )}
