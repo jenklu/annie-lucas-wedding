@@ -20,6 +20,12 @@ export class HomePage extends LitElement {
             run by the Ghiringhelli family ever since.
           </p>
           <p>
+            Annie’s grandfather, Harry, lived most of his life on the property and ran Deer Park
+            with his siblings. Annie’s mother, Joey, grew up on the property. Annie herself spent
+            much of her childhood being watched by her Grandma Jackie at Deer Park while her parents
+            were at work in Novato.
+          </p>
+          <p>
             For many years, Deer Park was open daily as an Italian restaurant. Today, the property
             is primarily a wedding venue, where couples are married under the redwood trees planted
             by Grandpa Joe almost 90 years ago. It is run by Annie’s cousin Mike and his sons,

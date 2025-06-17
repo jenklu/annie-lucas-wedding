@@ -3,11 +3,6 @@
   src: url('./fonts/atteron.ttf') format('truetype');
 }
 
-@font-face {
-  font-family: 'Fogie';
-  src: url('./fonts/fogie.ttf') format('truetype');
-}
-
 body {
   margin: 0;
   font-family: 'Atteron', sans-serif;

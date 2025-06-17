@@ -14,9 +14,12 @@ export const buttonStyles = css`
 `;
 
 export const paragraphStyle = css`
+  p,
+  li {
+    font-family: 'EB Garamond', sans-serif;
+    font-weight: 300;
+  }
   p {
-    font-family: 'fogie', sans-serif;
-    font-weight: 100;
     text-align: center;
   }
 `;

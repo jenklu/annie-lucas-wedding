@@ -117,8 +117,6 @@ export class GettingThere extends LitElement {
       border-radius: 5px;
       padding: 1rem;
       width: 75vw;
-      font-family: 'Fogie', sans-serif;
-      font-weight: 300;
     }
   `;
   static styles = [GettingThere.localStyles, paragraphStyle];
