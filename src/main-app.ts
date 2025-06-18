@@ -8,6 +8,7 @@ import { HomePage } from './home-page';
 import { EngagementPhotos } from './enagement-photos';
 import { SchedulePage } from './schedule-page';
 import { GettingThere } from './getting-there';
+import { WeddingPartyPage } from './wedding-party-page';
 
 async function hash(input: string) {
   const encoder = new TextEncoder();
@@ -68,6 +69,8 @@ export class MainApp extends LitElement {
 
   loggedInRoute(): LitElement {
     switch (this._currentHash) {
+      case '#/people-and-pics/wedding-party':
+        return new WeddingPartyPage();
       case '#/people-and-pics/engagement-photos':
         return new EngagementPhotos();
       case '#/schedule':
@@ -96,11 +99,15 @@ export class MainApp extends LitElement {
     return html`
       <span id="main-app">
         <wedding-navbar></wedding-navbar>
-        <img
-          id="fixed-background-image"
-          src="/home-background.jpg"
-          alt="Stylized watercolor image of Deer Park Villa set up for a wedding with altar"
-        />
+        ${this._currentHash !== '#/people-and-pics/wedding-party'
+          ? html`
+              <img
+                id="fixed-background-image"
+                src="/home-background.jpg"
+                alt="Stylized watercolor image of Deer Park Villa set up for a wedding with altar"
+              />
+            `
+          : ''}
         ${this.loggedInRoute()}
       </span>
     `;

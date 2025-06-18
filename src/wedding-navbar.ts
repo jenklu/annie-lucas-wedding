@@ -61,7 +61,6 @@ export class WeddingNavbar extends LitElement {
       'local-recommendations': true,
       'people-and-pics': true, // parent, people-and-pics landing doesn't exist
       'bride-groom': true,
-      'wedding-party': true,
     };
 
     // Define your navigation structure (now includes "home" at front)
@@ -188,7 +187,7 @@ export class WeddingNavbar extends LitElement {
       flex-direction: row;
       justify-content: center;
       width: 98vw;
-      margin-left: 1vw
+      margin-left: 1vw;
     }
 
     .tabcol {
@@ -223,7 +222,7 @@ export class WeddingNavbar extends LitElement {
     .main-tab.grouping {
       cursor: pointer;
       opacity: 1;
-      background: darkgrey
+      background: darkgrey;
       border: 2px solid transparent;
       font-weight: 500;
       color: #f6f3ef;
