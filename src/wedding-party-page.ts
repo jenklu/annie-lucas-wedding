@@ -96,7 +96,7 @@ export class WeddingPartyPage extends LitElement {
       display: flex;
       flex-direction: row;
       align-items: stretch;
-      margin: 15vh 0 2vh 0;
+      margin-top: 15vh;
       height: 83vh;
       width: max-content;
       z-index: 2;
@@ -105,8 +105,8 @@ export class WeddingPartyPage extends LitElement {
     }
     @media (max-width: 1270px) {
       .party-scroll {
-        margin: 35vh 0 2vh 0;
-        height: 63vh;
+        margin-top: 35vh;
+        height: 56vh;
       }
     }
   `;
