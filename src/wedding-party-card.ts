@@ -1,4 +1,4 @@
-import { LitElement, html, css } from 'lit';
+import { LitElement, html, css, type TemplateResult } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { paragraphStyle } from './styles';
 
@@ -7,8 +7,8 @@ export class WeddingPartyCard extends LitElement {
   @property({ type: String }) name = '';
   @property({ type: String }) title = '';
   @property({ type: String }) headshot = '';
-  @property({ type: String }) description = '';
-
+  @property({ type: Object })
+  description: TemplateResult = html``;
   render() {
     return html`
       <div class="card-container">
@@ -19,9 +19,7 @@ export class WeddingPartyCard extends LitElement {
         <div class="headshot-wrapper">
           <img class="headshot" src="${this.headshot}" alt="${this.name} headshot" />
         </div>
-        <div class="description">
-          <p>${this.description}</p>
-        </div>
+        <div class="description">${this.description}</div>
       </div>
     `;
   }
@@ -32,7 +30,7 @@ export class WeddingPartyCard extends LitElement {
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      width: 35vw;
+      width: 25vw;
       height: 100%;
       margin: 0 2vw;
       background: rgba(255, 255, 255, 0.1);
@@ -68,9 +66,6 @@ export class WeddingPartyCard extends LitElement {
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
     .description {
-      flex: 1 1 auto;
-      display: flex;
-      justify-content: center;
       width: 100%;
       overflow-y: scroll;
     }
@@ -81,7 +76,7 @@ export class WeddingPartyCard extends LitElement {
     }
     @media (max-width: 1270px) {
       .card-container {
-        width: 80vw;
+        width: 70vw;
       }
       .headshot {
         width: 15vw;

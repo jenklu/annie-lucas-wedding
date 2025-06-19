@@ -6,24 +6,64 @@ const BRIDESMAIDS = Array.from({ length: 9 }).map((_, i) => ({
   name: `Name ${i + 1}`,
   title: 'Bridesmaid',
   headshot: '/tab-image-ghibli.png',
-  description: `Laura and Annie met on their very first day at UCLA and lived on the same dorm floor (shoutout HH2N) their freshman year. It quickly became clear that Annie had met her match, Laura was just as loud and talkative, if not more (the subject of many HH2N debates), as Annie herself. 
-
-At UCLA, Laura and Annie went on to join the same sorority and later became roommates. Laura had a front row seat to Annie and Lucas's relationship from the very beginning. She played a pivotal role in planning their college pinning, engagement, and now their wedding.
-`,
+  description: html`
+    <p>
+      Laura and Annie met on their very first day at UCLA and lived on the same dorm floor (shoutout
+      HH2N) their freshman year. It quickly became clear that Annie had met her match, Laura was
+      just as loud and talkative, if not more (the subject of many HH2N debates), as Annie herself.
+    </p>
+    <p>
+      At UCLA, Laura and Annie went on to join the same sorority and later became roommates. Laura
+      had a front row seat to Annie and Lucas's relationship from the very beginning. She played a
+      pivotal role in planning their college pinning, engagement, and now their wedding.
+    </p>
+  `,
 }));
 
 const GROOMSMEN = Array.from({ length: 9 }).map((_, i) => ({
   name: `Name ${i + 1}`,
   title: 'Groomsman',
   headshot: '/tab-image-ghibli.png',
-  description: `Laura and Annie met on their very first day at UCLA and lived on the same dorm floor (shoutout HH2N) their freshman year. It quickly became clear that Annie had met her match, Laura was just as loud and talkative, if not more (the subject of many HH2N debates), as Annie herself. 
-  
-  At UCLA, Laura and Annie went on to join the same sorority and later became roommates. Laura had a front row seat to Annie and Lucas's relationship from the very beginning. She played a pivotal role in planning their college pinning, engagement, and now their wedding.
+  description: html`
+    <p>
+      Laura and Annie met on their very first day at UCLA and lived on the same dorm floor (shoutout
+      HH2N) their freshman year. It quickly became clear that Annie had met her match, Laura was
+      just as loud and talkative, if not more (the subject of many HH2N debates), as Annie herself.
+    </p>
+    <p>
+      At UCLA, Laura and Annie went on to join the same sorority and later became roommates. Laura
+      had a front row seat to Annie and Lucas's relationship from the very beginning. She played a
+      pivotal role in planning their college pinning, engagement, and now their wedding.
+    </p>
   `,
 }));
 
 @customElement('wedding-party-page')
 export class WeddingPartyPage extends LitElement {
+  scrollToAltarCenter() {
+    const altarImg = this.renderRoot.querySelector('.altar') as HTMLImageElement | null;
+    const scrollContainer = this.renderRoot.querySelector(
+      '.scroll-bg-container'
+    ) as HTMLElement | null;
+
+    if (altarImg && scrollContainer) {
+      const scrollToCenter = () => {
+        console.log('scrolling to center');
+        const scrollTo =
+          altarImg.offsetLeft + altarImg.offsetWidth / 2 - scrollContainer.clientWidth / 2;
+        scrollContainer.scrollTo({ left: scrollTo, behavior: 'smooth' });
+      };
+
+      if (altarImg.complete) {
+        scrollToCenter();
+      } else {
+        altarImg.addEventListener('load', scrollToCenter, { once: true });
+      }
+    } else {
+      console.log(`altarImg: ${altarImg} scrollContainer: ${scrollContainer}`);
+    }
+  }
+
   render() {
     return html`
       <div class="scroll-bg-container">
@@ -68,17 +108,19 @@ export class WeddingPartyPage extends LitElement {
       overflow-y: hidden;
       box-sizing: border-box;
       /* Hide scrollbar for Chrome, Safari and Opera */
-      scrollbar-width: none;
       z-index: -1;
     }
-    .scroll-bg-container::-webkit-scrollbar {
-      display: none;
-    }
+
     .bg-content {
       position: relative;
       width: max-content;
       height: 100%;
       min-width: 100vw;
+    }
+    .altar {
+      margin-left: -15vw;
+      margin-right: -15vw;
+      z-index: -1;
     }
     .altar-bg {
       position: fixed;
@@ -105,8 +147,12 @@ export class WeddingPartyPage extends LitElement {
     }
     @media (max-width: 1270px) {
       .party-scroll {
-        margin-top: 35vh;
-        height: 56vh;
+        margin-top: 27vh;
+        height: 65vh;
+      }
+      .altar {
+        margin-left: -50vw;
+        margin-right: -50vw;
       }
     }
   `;

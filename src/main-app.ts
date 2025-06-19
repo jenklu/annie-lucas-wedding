@@ -70,7 +70,11 @@ export class MainApp extends LitElement {
   loggedInRoute(): LitElement {
     switch (this._currentHash) {
       case '#/people-and-pics/wedding-party':
-        return new WeddingPartyPage();
+        const weddingParty = new WeddingPartyPage();
+        requestAnimationFrame(() => {
+          weddingParty.scrollToAltarCenter();
+        });
+        return weddingParty;
       case '#/people-and-pics/engagement-photos':
         return new EngagementPhotos();
       case '#/schedule':

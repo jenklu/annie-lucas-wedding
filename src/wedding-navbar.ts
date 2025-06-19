@@ -26,7 +26,7 @@ export class WeddingNavbar extends LitElement {
   private _setActiveFromHash = () => {
     const hash = location.hash.replace(/^#\//, '');
     const [tab, subtab] = hash.split('/');
-    this._activeTab = tab || '';
+    this._activeTab = tab || 'home';
     this._activeSubtab = subtab || '';
     // When a tab becomes active, expand it
     if (tab) {
@@ -61,8 +61,6 @@ export class WeddingNavbar extends LitElement {
 
     // Define your navigation structure (now includes "home" at front)
     const NAV = [
-      { label: 'Home', key: 'home' },
-      { label: 'RSVP', key: 'rsvp' },
       { label: 'Registry', key: 'registry' },
       { label: 'Schedule', key: 'schedule' },
       { label: 'Dress Code', key: 'dress-code' },
@@ -89,6 +87,25 @@ export class WeddingNavbar extends LitElement {
     return html`
       <nav>
         <div class="nav-container">
+          <div class="tabcol" id="first-items">
+            <button
+              class="main-tab ${this._activeTab == 'home' && 'active'}"
+              id="home-button"
+              @click="${() => this._navigate('home')}"
+            >
+              <img id="home-icon" src="/home.svg" />
+            </button>
+            <lucas-tooltip id="rsvp" text="Coming soon!">
+              <div
+                class="main-tab ${this._activeTab === 'rsvp' && 'active'}"
+                @click="${() => this._navigate('rsvp', '', true)}"
+                tabindex="0"
+                role="button"
+              >
+                RSVP
+              </div>
+            </lucas-tooltip>
+          </div>
           ${NAV.map(
             (tab) => html`
               <div class="tabcol">
@@ -193,6 +210,13 @@ export class WeddingNavbar extends LitElement {
       flex: 1 1 auto;
     }
 
+    #first-items {
+      flex-direction: row;
+      gap: 0.5rem;
+      justify-content: space-evenly;
+      align-items: flex-start;
+    }
+
     .main-tab {
       background: darkgrey;
       border-radius: 9px;
@@ -208,12 +232,6 @@ export class WeddingNavbar extends LitElement {
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
       user-select: none;
       border: 2px solid transparent;
-    }
-    .main-tab.active {
-      background: lightgrey;
-      color: #222;
-      border-color: #bca;
-      font-weight: 500;
     }
     .main-tab.grouping {
       cursor: pointer;
@@ -254,8 +272,16 @@ export class WeddingNavbar extends LitElement {
         color 0.12s;
       font-weight: 400;
     }
+    #home-button {
+      background-color: darkgrey;
+      height: 4.8rem;
+      padding: 0;
+      border: none;
+    }
     .subtab.active,
-    .subtab:focus {
+    .subtab:focus,
+    .main-tab.active,
+    #home-button.active {
       background: lightgrey;
       color: #252525;
       border-color: #bca;
@@ -265,18 +291,25 @@ export class WeddingNavbar extends LitElement {
       opacity: 0.8;
       pointer-events: none;
     }
-
+    #home-icon {
+      height: 100%;
+    }
     @media (max-width: 1270px) {
       .nav-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0.9rem 0.5rem;
-        width: 98vw;
-        margin-left: 1vw;
+        flex-wrap: wrap;
+        gap: 0.5rem;
       }
       .tabcol {
         align-items: stretch;
         min-width: unset;
+        flex-basis: 40vw;
+      }
+      #rsvp {
+        flex-grow: 4;
+      }
+      #home-button {
+        height: 100%;
+        height: 2.8rem;
       }
       .main-tab {
         font-size: 1.25rem;
