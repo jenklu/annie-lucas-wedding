@@ -11,7 +11,7 @@ import './tooltip';
 export class WeddingNavbar extends LitElement {
   @state() private _activeTab: string = '';
   @state() private _activeSubtab: string = '';
-  @state() private _expandedTabs: Set<string> = new Set();
+  @state() private _expandedTab: string = '';
 
   connectedCallback() {
     super.connectedCallback();
@@ -30,23 +30,19 @@ export class WeddingNavbar extends LitElement {
     this._activeSubtab = subtab || '';
     // When a tab becomes active, expand it
     if (tab) {
-      this._expandedTabs.add(tab);
+      this._expandedTab = tab;
     }
     this.requestUpdate();
   };
 
   private _navigate(tab: string, subtab: string = '', disabled = false) {
     if (disabled) return;
-    this._expandedTabs.clear();
+    this._expandedTab = '';
     location.hash = `#/${tab}${subtab ? '/' + subtab : ''}`;
   }
 
   private _toggleSubtabs(tab: string) {
-    if (this._expandedTabs.has(tab)) {
-      this._expandedTabs.delete(tab);
-    } else {
-      this._expandedTabs.add(tab);
-    }
+    this._expandedTab = this._expandedTab == tab ? '' : tab;
     this.requestUpdate();
   }
 
@@ -133,7 +129,7 @@ export class WeddingNavbar extends LitElement {
                           ${tab.label}
                         </div>
                       `}
-                ${tab.subtabs && this._expandedTabs.has(tab.key)
+                ${tab.subtabs && tab.key == this._expandedTab
                   ? html`
                       <div class="subtabs-row">
                         ${tab.subtabs.map((subtab) =>
