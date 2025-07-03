@@ -147,12 +147,12 @@ export class WeddingPartyPage extends LitElement {
     }
     @media (max-width: 1270px) {
       .party-scroll {
-        margin-top: 27vh;
-        height: 65vh;
+        margin-top: 19vh;
+        height: 70vh;
       }
       .altar {
-        margin-left: -50vw;
-        margin-right: -50vw;
+        margin-left: -40vw;
+        margin-right: -40vw;
       }
     }
   `;

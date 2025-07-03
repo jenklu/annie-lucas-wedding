@@ -41,7 +41,7 @@ export class GettingThere extends LitElement {
             If you prefer public transportation, the
             <a href="https://www.marinairporter.com/" target="_blank">Marin Airporter</a> has
             service from SFO to San Rafael, although it does not stop downtown.
-            <a href="https://groometransportation.com/sonoma-county/sfo-oak/"
+            <a href="https://groometransportation.com/sonoma-county/sfo-oak/" target="_blank"
               >Groome Transportation</a
             >
             has service from the Oakland airport to downtown San Rafael.

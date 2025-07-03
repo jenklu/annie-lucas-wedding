@@ -56,7 +56,6 @@ export class WeddingNavbar extends LitElement {
       lodging: true,
       'local-recommendations': true,
       'people-and-pics': true, // parent, people-and-pics landing doesn't exist
-      'bride-groom': true,
     };
 
     // Define your navigation structure (now includes "home" at front)
@@ -77,9 +76,9 @@ export class WeddingNavbar extends LitElement {
         label: 'People & Pics',
         key: 'people-and-pics',
         subtabs: [
-          { label: 'Bride & Groom', key: 'bride-groom' },
+          { label: 'Bride & Groom', key: 'bride-and-groom' },
           { label: 'Wedding Party', key: 'wedding-party' },
-          { label: 'Engagement Photos', key: 'engagement-photos' }, // this one IS finished!
+          { label: 'Engagement Photos', key: 'engagement-photos' },
         ],
       },
     ];
@@ -297,7 +296,8 @@ export class WeddingNavbar extends LitElement {
     @media (max-width: 1270px) {
       .nav-container {
         flex-wrap: wrap;
-        gap: 0.5rem;
+        column-gap: 0.5rem;
+        row-gap: 0.1rem;
       }
       .tabcol {
         align-items: stretch;
@@ -309,11 +309,11 @@ export class WeddingNavbar extends LitElement {
       }
       #home-button {
         height: 100%;
-        height: 2.8rem;
+        height: 2rem;
       }
       .main-tab {
         font-size: 1.25rem;
-        padding: 0.45em 0.6em;
+        padding: 0.1rem 0.6rem;
       }
       .subtabs-row {
         align-items: stretch;
