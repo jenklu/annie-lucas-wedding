@@ -156,6 +156,9 @@ export class BrideAndGroom extends LitElement {
         flex: 1;
         padding: 1rem;
         background-color: #fff8dc;
+        background-image: url(/paper.png);
+        background-repeat: repeat;
+        background-blend-mode: multiply;
         border-right: 1px solid #d2b48c;
         border-left: 1px solid #d2b48c;
         box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
