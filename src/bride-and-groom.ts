@@ -134,7 +134,16 @@ export class BrideAndGroom extends LitElement {
         align-items: center;
         justify-content: center;
         color: darkgrey;
-        background-color: #ab99af;
+        background:
+          linear-gradient(
+            90deg,
+            transparent 47%,
+            rgba(0, 0, 0, 0.18) 49%,
+            rgba(0, 0, 0, 0.4) 50%,
+            rgba(0, 0, 0, 0.18) 51%,
+            transparent 53%
+          ),
+          #ab99af;
         padding: 2rem;
         border: 3px solid #d2b48c;
         border-radius: 10px;
@@ -159,24 +168,39 @@ export class BrideAndGroom extends LitElement {
         background-image: url(/paper.png);
         background-repeat: repeat;
         background-blend-mode: multiply;
-        border-right: 1px solid #d2b48c;
-        border-left: 1px solid #d2b48c;
-        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+        box-shadow:
+          inset 0 0 40px 10px rgba(0, 0, 0, 0.07),
+          inset 0 0 5px rgba(0, 0, 0, 0.1);
+        mask-image: radial-gradient(ellipse 90% 80% at 50% 50%, #000 80%, transparent 100%);
+        -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 50%, #000 80%, transparent 100%);
         display: flex;
         flex-direction: column;
         gap: 1rem;
         overflow: visible; /* to ensure shadows appear above and below */
       }
 
-      .page-content::before,
-      .page-content::after {
+      /* Gutter shadow on inner edge of each page */
+      .page-content:first-child::after {
         content: '';
         position: absolute;
-        left: 0;
-        width: 100%;
-        height: 20px; /* adjust for shadow depth */
+        top: 0;
+        right: 0;
+        width: 18px;
+        height: 100%;
         pointer-events: none;
         z-index: 10;
+        background: linear-gradient(to left, rgba(0, 0, 0, 0.13) 0%, transparent 100%);
+      }
+      .page-content:last-child::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 18px;
+        height: 100%;
+        pointer-events: none;
+        z-index: 10;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.13) 0%, transparent 100%);
       }
 
       .page-content::before {
