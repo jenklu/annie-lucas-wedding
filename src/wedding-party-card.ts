@@ -8,7 +8,7 @@ export class WeddingPartyCard extends LitElement {
   @property({ type: String }) title = '';
   @property({ type: String }) headshot = '';
   @property({ type: Object })
-  description: TemplateResult = html``;
+  description: ReturnType<typeof html> = html``;
   render() {
     return html`
       <div class="card-container">
