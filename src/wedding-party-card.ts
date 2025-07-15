@@ -1,4 +1,4 @@
-import { LitElement, html, css, type TemplateResult } from 'lit';
+import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { paragraphStyle } from './styles';
 
