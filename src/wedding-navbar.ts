@@ -28,10 +28,6 @@ export class WeddingNavbar extends LitElement {
     const [tab, subtab] = hash.split('/');
     this._activeTab = tab || 'home';
     this._activeSubtab = subtab || '';
-    // When a tab becomes active, expand it
-    if (tab) {
-      this._expandedTab = tab;
-    }
     this.requestUpdate();
   };
 
