@@ -13,7 +13,7 @@ export class BrideAndGroom extends LitElement {
   private pages = [
     html`
       <div class="page-content">
-        <svg width="100%" height="25%" viewBox="0 0 200 200">
+        <svg width="25%" height="25%" viewBox="0 0 200 200">
           <circle cx="100" cy="100" r="80" fill="#D2B48C" stroke="#8B4513" stroke-width="3" />
           <text x="100" y="110" font-size="24" text-anchor="middle" fill="#8B4513">Page 1</text>
         </svg>
@@ -24,7 +24,7 @@ export class BrideAndGroom extends LitElement {
     `,
     html`
       <div class="page-content">
-        <svg width="100%" height="25%" viewBox="0 0 200 200">
+        <svg width="25%" height="25%" viewBox="0 0 200 200">
           <circle cx="100" cy="100" r="80" fill="#D2B48C" stroke="#8B4513" stroke-width="3" />
           <text x="100" y="110" font-size="24" text-anchor="middle" fill="#8B4513">Page 2</text>
         </svg>
@@ -35,7 +35,7 @@ export class BrideAndGroom extends LitElement {
     `,
     html`
       <div class="page-content">
-        <svg width="100%" height="25%" viewBox="0 0 200 200">
+        <svg width="25%" height="25%" viewBox="0 0 200 200">
           <circle cx="100" cy="100" r="80" fill="#D2B48C" stroke="#8B4513" stroke-width="3" />
           <text x="100" y="110" font-size="24" text-anchor="middle" fill="#8B4513">Page 3</text>
         </svg>
@@ -46,7 +46,7 @@ export class BrideAndGroom extends LitElement {
     `,
     html`
       <div class="page-content">
-        <svg width="100%" height="25%" viewBox="0 0 200 200">
+        <svg width="25%" height="25%" viewBox="0 0 200 200">
           <circle cx="100" cy="100" r="80" fill="#D2B48C" stroke="#8B4513" stroke-width="3" />
           <text x="100" y="110" font-size="24" text-anchor="middle" fill="#8B4513">Page 4</text>
         </svg>
@@ -57,7 +57,7 @@ export class BrideAndGroom extends LitElement {
     `,
     html`
       <div class="page-content">
-        <svg width="100%" height="25%" viewBox="0 0 200 200">
+        <svg width="25%" height="25%" viewBox="0 0 200 200">
           <circle cx="100" cy="100" r="80" fill="#D2B48C" stroke="#8B4513" stroke-width="3" />
           <text x="100" y="110" font-size="24" text-anchor="middle" fill="#8B4513">Page 5</text>
         </svg>
@@ -68,7 +68,7 @@ export class BrideAndGroom extends LitElement {
     `,
     html`
       <div class="page-content">
-        <svg width="100%" height="25%" viewBox="0 0 200 200">
+        <svg width="25%" height="25%" viewBox="0 0 200 200">
           <circle cx="100" cy="100" r="80" fill="#D2B48C" stroke="#8B4513" stroke-width="3" />
           <text x="100" y="110" font-size="24" text-anchor="middle" fill="#8B4513">Page 6</text>
         </svg>
@@ -79,7 +79,7 @@ export class BrideAndGroom extends LitElement {
     `,
     html`
       <div class="page-content">
-        <svg width="100%" height="25%" viewBox="0 0 200 200">
+        <svg width="25%" height="25%" viewBox="0 0 200 200">
           <circle cx="100" cy="100" r="80" fill="#D2B48C" stroke="#8B4513" stroke-width="3" />
           <text x="100" y="110" font-size="24" text-anchor="middle" fill="#8B4513">Page 7</text>
         </svg>
@@ -185,7 +185,7 @@ export class BrideAndGroom extends LitElement {
         display: flex;
         gap: 0rem;
         height: 100%;
-        overflow-y: visible;
+        overflow-y: scroll;
         background-color: #fff8dc;
         background-image: url(/paper.png);
         background-repeat: repeat;
@@ -259,19 +259,6 @@ export class BrideAndGroom extends LitElement {
         cursor: not-allowed;
       }
 
-      @media (max-width: 800px) {
-        button {
-          padding: 0.25rem 0.5rem;
-          font-size: 1.5rem;
-        }
-        .page {
-          flex-direction: column;
-          gap: 0;
-        }
-        .page-content {
-          width: 82vw;
-        }
-      }
       .page-content.flip-prev {
         animation: pageFlipPrev 0.75s cubic-bezier(0.4, 0.2, 0.2, 1);
         transform-origin: 100% 50%;
@@ -306,6 +293,24 @@ export class BrideAndGroom extends LitElement {
         100% {
           transform: perspective(1000px) rotateY(170deg);
           box-shadow: 0 0 32px 0px rgba(0, 0, 0, 0.18);
+        }
+      }
+      @media (max-width: 1270px) {
+        button {
+          padding: 0.25rem 0.5rem;
+          font-size: 1.5rem;
+        }
+        .page {
+          flex-direction: column;
+          gap: 0;
+        }
+        .page-content {
+          width: 82vw;
+        }
+        .book {
+          top: 18vh;
+          height: 65vh;
+          background: #ab99af;
         }
       }
     `,
