@@ -22,7 +22,7 @@ const BRIDESMAIDS = [
     `,
   },
   {
-    name: 'Angelica Griggs-Demon',
+    name: 'Angelica Griggs-Demmin',
     title: 'Bridesmaid',
     headshot: '/bridal-party/gel-cropped.jpg',
     description: html`
@@ -271,21 +271,14 @@ export class WeddingPartyPage extends LitElement {
             )}
             <div class="altar-wrapper">
               <div class="guidance">
-                <div
-                  class="arrow-wrapper"
-                  style="align-items:flex-start"
-                  @click=${() => this.scrollToLaura()}
-                >
-                  <h3>Bridesmaids</h3>
+                <div class="arrow-wrapper" @click=${() => this.scrollToLaura()}>
                   <img src="/chevron.svg" class="arrows flipped" />
+
+                  <h3>Bridesmaids</h3>
                 </div>
-                <div
-                  class="arrow-wrapper"
-                  style="align-items:flex-end"
-                  @click=${() => this.scrollToOliver()}
-                >
-                  <h3>Groomsmen</h3>
+                <div class="arrow-wrapper" @click=${() => this.scrollToOliver()}>
                   <img src="/chevron.svg" class="arrows" />
+                  <h3>Groomsmen</h3>
                 </div>
               </div>
               <img class="altar" src="/altar.png" alt="Altar with drapes & greenery" />
@@ -387,12 +380,21 @@ export class WeddingPartyPage extends LitElement {
         z-index: 2; /* over the altar image */
         width: 95vw;
         & .arrows {
-          height: 50vh;
+          height: 10vh;
         }
         & .arrow-wrapper {
-          flex-grow: 1;
           display: flex;
           flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 24px;
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+          padding: 15px;
+          box-sizing: border-box;
+          h3 {
+            margin: 0;
+          }
         }
         & .arrows.flipped {
           transform: rotateY(180deg);

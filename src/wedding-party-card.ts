@@ -13,8 +13,8 @@ export class WeddingPartyCard extends LitElement {
     return html`
       <div class="card-container">
         <div class="name-title">
-          <h2>${this.name}</h2>
-          <h3>${this.title}</h3>
+          <h3>${this.name}</h3>
+          <h4>${this.title}</h4>
         </div>
         <div class="headshot-wrapper">
           <img class="headshot" src="${this.headshot}" alt="${this.name} headshot" />
@@ -42,10 +42,10 @@ export class WeddingPartyCard extends LitElement {
     .name-title {
       text-align: center;
     }
-    .name-title h2 {
+    .name-title h3 {
       margin: 0;
     }
-    .name-title h3 {
+    .name-title h4 {
       margin: 0;
       font-weight: 400;
     }
@@ -60,10 +60,11 @@ export class WeddingPartyCard extends LitElement {
       width: 10vw;
       height: 10vw;
       object-fit: cover;
-      border-radius: 50%;
+      border-radius: 10px;
       background: #6cf;
       border: 0.3vw solid #fff;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 5px;
     }
     .description {
       width: 100%;
@@ -76,11 +77,11 @@ export class WeddingPartyCard extends LitElement {
     }
     @media (max-width: 1270px) {
       .card-container {
-        width: 70vw;
+        width: 80vw;
       }
       .headshot {
-        width: 15vw;
-        height: 15vw;
+        width: 25vw;
+        height: 25vw;
       }
     }
   `;
