@@ -117,10 +117,18 @@ const GROOMSMEN = [
     title: 'Best Man',
     headshot: '/bridal-party/oliver-cropped.jpg',
     description: html`
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
+      <p>
+        While they were on the same soccer team in K-2nd grade, Lucas and Oliver only grew close
+        early in high school. They initially connected over hip-hop, weightlifting, and Call of
+        Duty. But their friendship really grew in the shared trauma of AP Bio lab reports and pickup
+        basketball/tennis.
+      </p>
+      <p>
+        After high school, Lucas moved out to California while Oliver stayed in Boston, but they
+        stayed in close touch and have been able to meet up in places like Montreal, Las Vegas,
+        Tokyo, and Cape Cod in addition to returns to Boston.
+      </p>
+      <p>Lucas enjoys Oliver's quick wit and is excited to read his forthcoming fantasy novel.</p>
     `,
   },
   {
@@ -128,10 +136,26 @@ const GROOMSMEN = [
     title: 'Officiant',
     headshot: '/bridal-party/alex-cropped.jpg',
     description: html`
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
+      <p>
+        Alex has the unique honor of being roommates with both the groom AND the bride: Alex and
+        Lucas lived together for the first two years of the couple's relationship. Alex actually
+        sent a Venmo request to Annie for rent junior year because she spent so much time at their
+        frat house.
+      </p>
+      <p>
+        Alex and Lucas initially bonded over their attempts to get their fraternity out of a
+        substantial amount of debt. They found that they got along well as they pleaded their case
+        to the rest of the fraternity about the best way to get back in the black.
+      </p>
+      <p>
+        Lucas appreciates the variety of outdoor activities Alex partakes in and his ability to
+        motivate others to join in these activities: Alex has brought Lucas to play basketball,
+        pickleball, golf, and whiffle ball, as well as hike, run a Spartan race, and run a 5k.
+      </p>
+      <p>
+        Alex's wife Leanna and Annie have also gotten to know each other well, with Leanna and Alex
+        hosting Lucas and Annie in LA while Lucas and Annie returned the favor in New York.
+      </p>
     `,
   },
   {
@@ -139,7 +163,7 @@ const GROOMSMEN = [
     title: 'Groomsman',
     headshot: '/bridal-party/kolo-cropped.jpg',
     description: html`
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
+      <p>Andrew</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
