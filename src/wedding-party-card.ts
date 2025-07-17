@@ -73,6 +73,7 @@ export class WeddingPartyCard extends LitElement {
     .description p {
       text-align: center;
       margin: 0;
+      margin-top: 5px;
       line-height: 1.5;
     }
     @media (max-width: 1270px) {
