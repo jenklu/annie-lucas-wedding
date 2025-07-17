@@ -26,10 +26,19 @@ const BRIDESMAIDS = [
     title: 'Bridesmaid',
     headshot: '/bridal-party/gel-cropped.jpg',
     description: html`
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
+      <p>
+        Despite photo evidence that they first met in a 2003 local ballet production of Coppelia,
+        Gel and Annie truly became friends in 8th grade. Although they attended different middle
+        schools, they were in the same Advanced Geometry class held early mornings at Sonoma Valley
+        High. This means Lucas is actually the second important person to have come into Annie’s
+        life because of a math class.
+      </p>
+      <p>
+        Their friendship was cemented into a lifelong bond in the following years when they attended
+        high school together. Senior year, when Gel’s family moved to Virginia, she moved into
+        Annie’s house to finish out the school year in Sonoma. To this day, Annie’s parents enjoy
+        bragging about the accomplishments of their second daughter, she’s a doctor!
+      </p>
     `,
   },
   {
@@ -37,10 +46,19 @@ const BRIDESMAIDS = [
     title: 'Bridesmaid',
     headshot: '/bridal-party/ciara-cropped.jpg',
     description: html`
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
+      <p>
+        Ciara is Annie’s oldest friend. The pair met in preschool where Annie forced her friendship
+        on Ciara because they had the same PowerPuff Girls lunchbox. Ciara recently tracked down and
+        bought the exact lunchbox for Annie as a birthday present.
+      </p>
+      <p>
+        Throughout their childhood, Ciara and Annie went to the same schools, played on the same
+        youth sports teams, and were never far apart. They were always the two tallest girls in
+        their class. With Ciara standing a few inches taller than Annie, they’ve been making boys
+        feel short since 2000 (sorry Lucas). Don’t ask her the stereotypical “Do you play
+        basketball?”, but as a contributor and podcast host for a basketball magazine, Ciara
+        probably does know more about the game than you.
+      </p>
     `,
   },
   {
