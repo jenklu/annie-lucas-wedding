@@ -118,17 +118,23 @@ const GROOMSMEN = [
     headshot: '/bridal-party/oliver-cropped.jpg',
     description: html`
       <p>
-        While they were on the same soccer team in K-2nd grade, Lucas and Oliver only grew close
-        early in high school. They initially connected over hip-hop, weightlifting, and Call of
-        Duty. But their friendship really grew in the shared trauma of AP Bio lab reports and pickup
-        basketball/tennis.
+        While they were on the same soccer team in K-2nd grade, Lucas and Oliver didn't become
+        friends until early in high school.
+      </p>
+      <p>
+        They initially connected over hip-hop, weightlifting, and Call of Duty, and their friendship
+        grew over trips to Harvard Square, pickup basketball/tennis, and the shared trauma of AP Bio
+        lab reports.
       </p>
       <p>
         After high school, Lucas moved out to California while Oliver stayed in Boston, but they
-        stayed in close touch and have been able to meet up in places like Montreal, Las Vegas,
-        Tokyo, and Cape Cod in addition to returns to Boston.
+        stayed in close touch. One of their best together was when Lucas and Annie visited Oliver in
+        Tokyo and he took them on a 20k step walking tour through the city.
       </p>
-      <p>Lucas enjoys Oliver's quick wit and is excited to read his forthcoming fantasy novel.</p>
+      <p>
+        Lucas enjoys Oliver's quick wit and book recommendations, even if he takes a while to read
+        them.
+      </p>
     `,
   },
   {
@@ -139,22 +145,19 @@ const GROOMSMEN = [
       <p>
         Alex has the unique honor of being roommates with both the groom AND the bride: Alex and
         Lucas lived together for the first two years of the couple's relationship. Alex actually
-        sent a Venmo request to Annie for rent junior year because she spent so much time at their
-        frat house.
+        sent a Venmo request to Annie for rent once because she spent so much time at their frat
+        house.
       </p>
       <p>
-        Alex and Lucas initially bonded over their attempts to get their fraternity out of a
-        substantial amount of debt. They found that they got along well as they pleaded their case
-        to the rest of the fraternity about the best way to get back in the black.
+        Alex and Lucas initially bonded over their efforts to get their fraternity out of debt. They
+        found themselves agreeing often as they pleaded their case for frugality to the rest of the
+        fraternity.
       </p>
       <p>
         Lucas appreciates the variety of outdoor activities Alex partakes in and his ability to
-        motivate others to join in these activities: Alex has brought Lucas to play basketball,
-        pickleball, golf, and whiffle ball, as well as hike, run a Spartan race, and run a 5k.
-      </p>
-      <p>
-        Alex's wife Leanna and Annie have also gotten to know each other well, with Leanna and Alex
-        hosting Lucas and Annie in LA while Lucas and Annie returned the favor in New York.
+        motivate others to join in these activities. He often recalls fondly the Spartan Race they
+        prepared for: having a legitimate excuse to use the monkey bars next to the UCLA track to
+        train was debatably more satifsying than actually finishing the race.
       </p>
     `,
   },
@@ -163,10 +166,22 @@ const GROOMSMEN = [
     title: 'Groomsman',
     headshot: '/bridal-party/kolo-cropped.jpg',
     description: html`
-      <p>Andrew</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
+      <p>
+        As with most of his Lucas' UCLA friends, drinking games and UCLA sports were the bedrock of
+        Lucas and Andrew's friendship. Their friendship really blossomed when they lived together
+        during their senior year at UCLA.
+      </p>
+      <p>
+        Although they really grew close during senior year, they've been able to keep their
+        long-distance friendship going with frequent meetups: San Francisco, LA, Temecula, Austin,
+        and Philadelphia. They've been able to get 18 holes in during most of those trips.
+      </p>
+      <p>
+        Lucas' favorite memory with "Kolo" was probably their first night in Austin, where Kolo was
+        Lucas' local guide in his home state. Kolo started the night off at a Par 3 course with
+        glow-in-the-dark balls, proceeded on to some great Tex-Mex, and ended the night by shutting
+        down 6th Street. Night golf, good tacos, and live music are hard to beat!
+      </p>
     `,
   },
   {
@@ -174,10 +189,21 @@ const GROOMSMEN = [
     title: 'Groomsman',
     headshot: '/bridal-party/ben-hunter-cropped.jpg',
     description: html`
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
+      <p>
+        Ben was Lucas' "little bro" in their fraternity. Despite standing 5+" taller than Lucas, Ben
+        has felt in many ways like the little brother that Lucas often pleaded with his parents for
+        as a kid.
+      </p>
+      <p>
+        After college, Lucas moved to San Francisco, and frequently hung out with Ben when he
+        visited his home back in Marin County. Ask Ben for local recommendations if you're coming
+        from out of town!
+      </p>
+      <p>
+        Lucas and Ben continue to bond over their Dead & Co. fandom, UCLA sports, and occasional
+        rounds of golf. Lucas often thinks back to watching John Mayer and Bob Weir shred as the sun
+        set on a beautiful LA night at the Hollywood Bowl with Ben.
+      </p>
     `,
   },
   {
@@ -185,10 +211,21 @@ const GROOMSMEN = [
     title: 'Groomsman',
     headshot: '/bridal-party/spencer-cropped.jpg',
     description: html`
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
+      <p>
+        Spencer and Lucas quickly hit it off as the only two East Coast Jews in a West Coast
+        fraternity pledge class. Although Spencer is a New Yorker, Lucas found him easier to like
+        after learning he was a Pittsburgh fan and not a Yankee/Giant fan.
+      </p>
+      <p>
+        Their friendship today thrives on golf and UCLA sports. Spencer is the better golfer, but
+        Lucas has gotten the better of him in most of their matches, even though he swears he's not
+        sandbagging.
+      </p>
+      <p>
+        Lucas appreciates Spencer's loyalty and willingness to always help out his close friends.
+        Lucas relishes the memory of watching Mac Jones beat Spencer's Steelers at Heinz Field after
+        a great golf day.
+      </p>
     `,
   },
   {
@@ -196,10 +233,17 @@ const GROOMSMEN = [
     title: 'Groomsman',
     headshot: '/bridal-party/sol-cropped.jpg',
     description: html`
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
+      <p>
+        Solomon and Lucas met in Little League and have been friends ever since. Lucas helped
+        convince Solomon to move to New York a few years ago and since then they've made the most of
+        their time in the city together, taking the Manhattan and Brooklyn bars by storm.
+      </p>
+      <p>
+        Solomon is the life of every party he attends, and Lucas appreciates his "fun guy" attitude.
+        One of Lucas' favorite nights out with Solomon was when he took over the drumset at a live
+        band's show in Boston and adeptly filled in for a couple songs. He's excited to see what
+        dance moves Solomon pulls out in California.
+      </p>
     `,
   },
   {
@@ -207,10 +251,18 @@ const GROOMSMEN = [
     title: 'Groomsman',
     headshot: '/bridal-party/ben-wu-cropped.jpg',
     description: html`
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
+      <p>
+        Ben has been one of Lucas' closest friends since middle school. He joined Lucas in NYC
+        shortly after Solomon moved down. While Ben and Lucas still haven't been able to figure out
+        their schedules to grab lunch even though their offices are on the same block, they make a
+        point of seeing each other regularly on the weekends.
+      </p>
+      <p>
+        Sports are at the center of Ben and Lucas' friendship. Aside from nights out with Solomon,
+        they spend most of their time together playing pickup basketball at Thompkins Square Park in
+        NYC, trading championships in their fantasy football league, watching the Celtics / Patriots
+        together, or reminiscing on their high school football careers.
+      </p>
     `,
   },
   {
@@ -218,10 +270,20 @@ const GROOMSMEN = [
     title: 'Groomsman',
     headshot: '/bridal-party/dq-cropped.jpg',
     description: html`
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
+      <p>
+        Lucas and Daniel (or DQ, as high school friends affectionately refer to him) have been
+        friends since elementary school.
+      </p>
+      <p>
+        One of Lucas' favorite memories with DQ was the last day of a Las Vegas trip just after
+        turning 21. Fed up with the strip after 7 too-long and too-hot days, Lucas and DQ rented a
+        car and drove out to the Hoover Dam, an American engineering marvels. The weather wasn't any
+        better, but it was nice to get off the strip and see a real work of infrastructure.
+      </p>
+      <p>
+        DQ may come in last in the fantasy football league every year, but Lucas appreciates his
+        willingness to stay in the league and give it the old college try.
+      </p>
     `,
   },
 ];
