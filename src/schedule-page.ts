@@ -38,6 +38,19 @@ export class SchedulePage extends LitElement {
       >`,
     },
     {
+      slug: 'after-party',
+      title: 'Wedding After-Party',
+      time: 'Late Night, Saturday June 20th, 2026',
+      location: html`<a
+          href="https://maps.app.goo.gl/k9dsiEf2DQaChoxSA"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Mac's at 19 Broadway, Fairfax</a
+        >.
+        <br />
+        NOTE: There will be a bus from Deer Park to Mac's for those interested`,
+    },
+    {
       slug: 'brunch',
       title: 'Brunch',
       time: 'TBA Late Morning, Sunday June 21st, 2026',

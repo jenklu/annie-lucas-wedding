@@ -64,8 +64,8 @@ export class GettingThere extends LitElement {
             Fairfax, CA 94930.
           </p>
           <p>
-            We are organizing shuttles to and from the hotel block in downtown San Rafael to the
-            venue.
+            On the day of the wedding, shuttles wil be available between the hotel block in downtown
+            San Rafael and the venue.
           </p>
           <p>
             If you prefer to find your own way to and from the wedding, Deer Park has a large

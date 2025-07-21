@@ -49,7 +49,6 @@ export class WeddingNavbar extends LitElement {
       registry: true,
       'dress-code': true,
       travel: true, // parent, actual travel info main page doesn't exist
-      lodging: true,
       'local-recommendations': true,
       'people-and-pics': true, // parent, people-and-pics landing doesn't exist
     };
