@@ -145,9 +145,10 @@ const GROOMSMEN = [
         lab reports.
       </p>
       <p>
-        After high school, Lucas moved out to California while Oliver stayed in Boston, but they
-        stayed in close touch. One of their best together was when Lucas and Annie visited Oliver in
-        Tokyo and he took them on a 20k step walking tour through the city.
+        After high school, Lucas moved out to California while Oliver stayed in the northeast before
+        moving to Tokyo. Even so, they stayed in close touch. One of their best days together was
+        when Lucas and Annie visited Oliver in Tokyo and he took them on a 20k step walking tour
+        through the city.
       </p>
       <p>
         Lucas enjoys Oliver's quick wit and book recommendations, even if he takes a while to read
@@ -186,13 +187,13 @@ const GROOMSMEN = [
     description: html`
       <p>
         As with most of his Lucas' UCLA friends, drinking games and UCLA sports were the bedrock of
-        Lucas and Andrew's friendship. Their friendship really blossomed when they lived together
-        during their senior year at UCLA.
+        Lucas and Andrew's friendship. They grew even closer when living together during their
+        senior year at UCLA.
       </p>
       <p>
-        Although they really grew close during senior year, they've been able to keep their
-        long-distance friendship going with frequent meetups: San Francisco, LA, Temecula, Austin,
-        and Philadelphia. They've been able to get 18 holes in during most of those trips.
+        Although they bonded during senior year, they've been able to keep their long-distance
+        friendship going with frequent meetups: San Francisco, LA, Temecula, Austin, and
+        Philadelphia. They've been able to get 18 holes in during most of those trips.
       </p>
       <p>
         Lucas' favorite memory with "Kolo" was probably their first night in Austin, where Kolo was
@@ -231,8 +232,8 @@ const GROOMSMEN = [
     description: html`
       <p>
         Spencer and Lucas quickly hit it off as the only two East Coast Jews in a West Coast
-        fraternity pledge class. Although Spencer is a New Yorker, Lucas found him easier to like
-        after learning he was a Pittsburgh fan and not a Yankee/Giant fan.
+        fraternity pledge class. Although Spencer is a New Yorker, Lucas found him more likable
+        after learning he was a Pittsburgh fan instead of a Yankee/Giant fan.
       </p>
       <p>
         Their friendship today thrives on golf and UCLA sports. Spencer is the better golfer, but
@@ -277,7 +278,7 @@ const GROOMSMEN = [
       </p>
       <p>
         Sports are at the center of Ben and Lucas' friendship. Aside from nights out with Solomon,
-        they spend most of their time together playing pickup basketball at Thompkins Square Park in
+        they spend most of their time together playing pickup basketball at Tompkins Square Park in
         NYC, trading championships in their fantasy football league, watching the Celtics / Patriots
         together, or reminiscing on their high school football careers.
       </p>
@@ -293,7 +294,7 @@ const GROOMSMEN = [
         friends since elementary school.
       </p>
       <p>
-        One of Lucas' favorite memories with DQ was the last day of a Las Vegas trip just after
+        One of Lucas' favorite memories with DQ was the last day of a trip to Las Vegas just after
         turning 21. Fed up with the strip after 7 too-long and too-hot days, Lucas and DQ rented a
         car and drove out to the Hoover Dam, an American engineering marvels. The weather wasn't any
         better, but it was nice to get off the strip and see a real work of infrastructure.
