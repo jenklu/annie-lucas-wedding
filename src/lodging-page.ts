@@ -13,11 +13,18 @@ export class LodgingPage extends LitElement {
           <p>
             We have reserved a room block for Friday, June 19 and Saturday, June 20 at the
             <a
-              href="https://www.marriott.com/en-us/hotels/sfoar-ac-hotel-san-rafael-downtown"
+              href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1753291997435&key=GRP&app=resvlink"
               target="_blank"
             >
               AC Marriott San Rafael Downtown </a
-            >. Please make sure you have entered the Group Code TODOOOOO to get the best rate.
+            >. Please make sure you have entered the Group Code ALWALWA when booking to get the best
+            rate.
+            <a
+              href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1753291997435&key=GRP&app=resvlink"
+              target="_blank"
+              >This link</a
+            >
+            will include the group code.
           </p>
           <p>
             This hotel is a 10 minute drive from the wedding venue, and the buses on wedding day
