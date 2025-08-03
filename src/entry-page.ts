@@ -22,7 +22,12 @@ export class EntryPage extends LitElement {
         </form>
         ${existingFirstAndLast
           ? html`
-              <div class="error">Sorry, the name ${existingFirstAndLast} is not recognized</div>
+              <div class="error">
+                Sorry, ${existingFirstAndLast} is not recognized.
+
+                <br />
+                Please try your nickname or formal name instead.
+              </div>
             `
           : ''}
       </div>

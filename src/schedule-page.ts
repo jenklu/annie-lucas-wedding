@@ -11,7 +11,7 @@ interface EventInfo {
 @customElement('schedule-page')
 export class SchedulePage extends LitElement {
   @property({ type: Array })
-  invitedEvents: Array<string> | 'all' = 'all';
+  invitedEvents: Array<string> = ['wedding'];
 
   private static allEvents: EventInfo[] = [
     {
@@ -50,23 +50,19 @@ export class SchedulePage extends LitElement {
         <br />
         NOTE: There will be a bus from Deer Park to Mac's for those interested`,
     },
-    {
-      slug: 'brunch',
-      title: 'Brunch',
-      time: 'TBA Late Morning, Sunday June 21st, 2026',
-      location: 'TBA, San Rafael',
-    },
+    // {
+    //   slug: 'brunch',
+    //   title: 'Brunch',
+    //   time: 'TBA Late Morning, Sunday June 21st, 2026',
+    //   location: 'TBA, San Rafael',
+    // },
   ];
-
-  private isInvited(slug: string): boolean {
-    return this.invitedEvents === 'all' || this.invitedEvents.includes(slug);
-  }
 
   render() {
     return html`
       <section>
         ${SchedulePage.allEvents
-          .filter((event) => this.isInvited(event.slug))
+          .filter((event) => this.invitedEvents.includes(event.slug))
           .map(
             (event) => html`
               <div class="event">

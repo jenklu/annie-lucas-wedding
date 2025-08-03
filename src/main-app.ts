@@ -11,15 +11,7 @@ import { GettingThere } from './getting-there';
 import { WeddingPartyPage } from './wedding-party-page';
 import { BrideAndGroom } from './bride-and-groom';
 import { LodgingPage } from './lodging-page';
-
-async function hash(input: string) {
-  const encoder = new TextEncoder();
-  const data = encoder.encode(input);
-  const hashBuffer = await crypto.subtle.digest('SHA-256', data);
-  return Array.from(new Uint8Array(hashBuffer))
-    .map((b) => b.toString(16).padStart(2, '0'))
-    .join('');
-}
+import { hashName, hashedNames } from './guest-name-validation';
 
 /**
  * The root of the application
@@ -31,7 +23,7 @@ export class MainApp extends LitElement {
   private _isLoggedIn: boolean | null = null;
 
   @state()
-  private _invitedEvents: Array<string> | 'all' = [];
+  private _invitedEvents: Array<string> = [];
 
   @state()
   private _currentHash: string = location.hash;
@@ -47,14 +39,8 @@ export class MainApp extends LitElement {
       this._isLoggedIn = false;
       return;
     }
-    const hashedNames: Record<string, Array<string> | 'all'> = {
-      '9f424d960f9d13b30a5ca714c566fd7e23c2bf9bad6af9f56cdac6ac3ba2d7cf': 'all',
-      '91035d246c53b319938341b25d8cdd123bde586df097f17d379f14d9f5405651': [
-        'welcome-party',
-        'wedding',
-      ],
-    };
-    hash(firstAndLastName).then((hashed: string) => {
+
+    hashName(firstAndLastName).then((hashed: string) => {
       this._isLoggedIn = Object.keys(hashedNames).includes(hashed);
       this._invitedEvents = hashedNames[hashed];
     });
