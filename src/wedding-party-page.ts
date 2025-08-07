@@ -165,15 +165,14 @@ const BRIDESMAIDS = [
     description: html`
       <p>
         Tess is Lucas' youngest sister. She's made a habit out of copying both Lucas (becoming a
-        software engineer, starting a cross-country relationship after college with someone on the
+        software engineer, starting a cross-country relationship with someone from college on the
         East Coast) and Annie (joining a sorority, moving to Seattle, and being the rare woman in a
         work environment with mostly men).
       </p>
       <p>
-        When Tess and Lucas are not discussing the latest challenges in software engineering, they
-        stay in touch by swapping monkey videos on Instagram Reels.
+        Lucas and Annie have enjoyed having Tess visit them in NYC, and hope to convince her to move
+        there. But for now, Lucas and Tess mostly stay in touch by swapping monkey videos online.
       </p>
-      <p>Annie and Lucas are excited to have Tess by their side on their big day.</p>
     `,
   },
   {
@@ -181,8 +180,23 @@ const BRIDESMAIDS = [
     title: 'Bridesmaid',
     headshot: '/bridal-party/maddie-cropped.jpg',
     description: html`
-      <p>Maddie is the middle sister of Lucas' family.</p>
-      <p>Annie and Lucas are excited to have Maddie by their side on their big day.</p>
+      <p>
+        Maddie is the middle sister of Lucas' family. Clearly Maddie didn't look up to Lucas as
+        much, since she branched out from software engineering and the west coast to study medicine
+        in upstate NY.
+      </p>
+      <p>
+        She is the best costumed-guest at any party, whether it's a costume party or not. Her most
+        notable costume was
+        <a href="/bridal-party/maddie-ben-franklin.png" target="_blank"
+          >the saucy Benjamin Franklin impersonator from "The Office"</a
+        >, but she's not afraid to bust out a costume at any time of year.
+      </p>
+
+      <p>
+        While she'll have to settle for a bridesmaid's dress instead of a costume, Annie and Lucas
+        are excited to have Maddie by their side on their big day.
+      </p>
     `,
   },
 ].reverse();
@@ -199,13 +213,13 @@ const GROOMSMEN = [
       </p>
       <p>
         They initially connected over hip-hop, weightlifting, and Call of Duty, and their friendship
-        grew over trips to Harvard Square, pickup basketball/tennis, and the shared trauma of AP Bio
-        lab reports.
+        grew through trips to Harvard Square, pickup basketball/tennis, and the shared trauma of AP
+        Bio lab reports.
       </p>
       <p>
         After high school, Lucas moved out to California while Oliver stayed in the northeast before
         moving to Tokyo. Even so, they stayed in close touch. One of their best days together was
-        when Lucas and Annie visited Oliver in Tokyo and he took them on a 20k step walking tour
+        when Lucas and Annie visited Oliver in Tokyo and he took them on a 20,000-step walking tour
         through the city.
       </p>
       <p>
@@ -221,9 +235,8 @@ const GROOMSMEN = [
     description: html`
       <p>
         Alex has the unique honor of being roommates with both the groom AND the bride: Alex and
-        Lucas lived together for the first two years of the couple's relationship. Alex actually
-        sent a Venmo request to Annie for rent once because she spent so much time at their frat
-        house.
+        Lucas lived together for the first two years of the couple's relationship. Alex even sent a
+        Venmo request to Annie for rent once because she spent so much time at their frat house.
       </p>
       <p>
         Alex and Lucas initially bonded over their efforts to get their fraternity out of debt. They
@@ -234,7 +247,7 @@ const GROOMSMEN = [
         Lucas appreciates the variety of outdoor activities Alex partakes in and his ability to
         motivate others to join in these activities. He often recalls fondly the Spartan Race they
         prepared for: having a legitimate excuse to use the monkey bars next to the UCLA track to
-        train was debatably more satifsying than actually finishing the race.
+        train was debatably more satisfying than actually finishing the race.
       </p>
     `,
   },
@@ -244,14 +257,14 @@ const GROOMSMEN = [
     headshot: '/bridal-party/kolo-cropped.jpg',
     description: html`
       <p>
-        As with most of his Lucas' UCLA friends, drinking games and UCLA sports were the bedrock of
+        As with most of Lucas' UCLA friends, drinking games and UCLA sports were the bedrock of
         Lucas and Andrew's friendship. They grew even closer when living together during their
         senior year at UCLA.
       </p>
       <p>
-        Although they bonded during senior year, they've been able to keep their long-distance
-        friendship going with frequent meetups: San Francisco, LA, Temecula, Austin, and
-        Philadelphia. They've been able to get 18 holes in during most of those trips.
+        Although they bonded during senior year, they've kept their long-distance friendship going
+        with frequent meetups: San Francisco, LA, Temecula, Austin, and Philadelphia. They've been
+        able to squeeze 18 holes in during most of those trips.
       </p>
       <p>
         Lucas' favorite memory with "Kolo" was probably their first night in Austin, where Kolo was
@@ -278,8 +291,8 @@ const GROOMSMEN = [
       </p>
       <p>
         Lucas and Ben continue to bond over their Dead & Co. fandom, UCLA sports, and occasional
-        rounds of golf. Lucas often thinks back to watching John Mayer and Bob Weir shred as the sun
-        set on a beautiful LA night at the Hollywood Bowl with Ben.
+        rounds of golf. Lucas often thinks back to watching John Mayer and Bob Weir shred with Ben
+        as the sun set on a beautiful LA night at the Hollywood Bowl.
       </p>
     `,
   },
@@ -290,18 +303,18 @@ const GROOMSMEN = [
     description: html`
       <p>
         Spencer and Lucas quickly hit it off as the only two East Coast Jews in a West Coast
-        fraternity pledge class. Although Spencer is a New Yorker, Lucas found him more likable
-        after learning he was a Pittsburgh fan instead of a Yankee/Giant fan.
+        fraternity pledge class. Although Spencer is a New Yorker, Lucas warmed up to him after
+        learning he was a Pittsburgh fan instead of a Yankee/Giant fan.
       </p>
       <p>
         Their friendship today thrives on golf and UCLA sports. Spencer is the better golfer, but
-        Lucas has gotten the better of him in most of their matches, even though he swears he's not
+        Lucas has gotten the better of him in most of their matches, though he swears he's not
         sandbagging.
       </p>
       <p>
         Lucas appreciates Spencer's loyalty and willingness to always help out his close friends.
         Lucas relishes the memory of watching Mac Jones beat Spencer's Steelers at Heinz Field after
-        a great golf day.
+        a great day of golf.
       </p>
     `,
   },
@@ -312,13 +325,13 @@ const GROOMSMEN = [
     description: html`
       <p>
         Solomon and Lucas met in Little League and have been friends ever since. Lucas helped
-        convince Solomon to move to New York a few years ago and since then they've made the most of
+        convince Solomon to move to New York a few years ago. Since then they've made the most of
         their time in the city together, taking the Manhattan and Brooklyn bars by storm.
       </p>
       <p>
         Solomon is the life of every party he attends, and Lucas appreciates his "fun guy" attitude.
         One of Lucas' favorite nights out with Solomon was when he took over the drumset at a live
-        band's show in Boston and adeptly filled in for a couple songs. He's excited to see what
+        band's show in Boston and adeptly filled in for a couple songs. He's excited to see the
         dance moves Solomon pulls out in California.
       </p>
     `,
@@ -348,13 +361,13 @@ const GROOMSMEN = [
     headshot: '/bridal-party/dq-cropped.jpg',
     description: html`
       <p>
-        Lucas and Daniel (or DQ, as high school friends affectionately refer to him) have been
-        friends since elementary school.
+        Lucas and Daniel (or DQ, as high school friends affectionately call him) have been friends
+        since elementary school.
       </p>
       <p>
         One of Lucas' favorite memories with DQ was the last day of a trip to Las Vegas just after
-        turning 21. Fed up with the strip after 7 too-long and too-hot days, Lucas and DQ rented a
-        car and drove out to the Hoover Dam, an American engineering marvels. The weather wasn't any
+        turning 21. Fed up with the Strip after 7 too-long and too-hot days, Lucas and DQ rented a
+        car and drove out to the Hoover Dam, an American engineering marvel. The weather wasn't any
         better, but it was nice to get off the strip and see a real work of infrastructure.
       </p>
       <p>
