@@ -46,7 +46,7 @@ const BRIDESMAIDS = [
       <p>
         Senior year, when Gel’s family moved to Virginia, she officially moved into Annie’s house to
         finish out the school year in Sonoma. To this day, Annie’s parents enjoy bragging about the
-        accomplishments of their second daughter, she’s a doctor!
+        accomplishments of their second daughter, which is easy because she’s a doctor!
       </p>
     `,
   },
