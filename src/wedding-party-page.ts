@@ -10,14 +10,19 @@ const BRIDESMAIDS = [
     description: html`
       <p>
         Laura and Annie met on their very first day at UCLA and lived on the same dorm floor
-        (shoutout HH2N) their freshman year. It quickly became clear that Annie had met her match,
-        Laura was just as loud and talkative, if not more (the subject of many HH2N debates), as
-        Annie herself.
+        (shoutout HH2N) their freshman year. It quickly became clear that Annie had met her match.
+        Laura was just as loud and talkative as Annie herself, if not more so (a frequent subject of
+        many HH2N debates)
       </p>
       <p>
-        At UCLA, Laura and Annie went on to join the same sorority and later became roommates. Laura
-        had a front row seat to Annie and Lucas's relationship from the very beginning. She played a
-        pivotal role in planning their college pinning, engagement, and now their wedding.
+        Laura and Annie went on to join the same sorority and later became roommates. Although they
+        did have their fun, Annie (a math major) was always happy to have Laura (a mechanical
+        engineering major) by her side for late night study sessions when the rest of their friends
+        were hitting the town.
+      </p>
+      <p>
+        Laura had a front row seat to Annie and Lucas’s relationship from the very beginning. She
+        played a pivotal role in planning their college pinning, engagement, and now their wedding.
       </p>
     `,
   },
@@ -30,14 +35,18 @@ const BRIDESMAIDS = [
         Despite photo evidence that they first met in a 2003 local ballet production of Coppelia,
         Gel and Annie truly became friends in 8th grade. Although they attended different middle
         schools, they were in the same Advanced Geometry class held early mornings at Sonoma Valley
-        High. This means Lucas is actually the second important person to have come into Annie’s
-        life because of a math class.
+        High. This means Lucas is actually the <u>second</u> important person to have come into
+        Annie’s life because of a math class.
       </p>
       <p>
         Their friendship was cemented into a lifelong bond in the following years when they attended
-        high school together. Senior year, when Gel’s family moved to Virginia, she moved into
-        Annie’s house to finish out the school year in Sonoma. To this day, Annie’s parents enjoy
-        bragging about the accomplishments of their second daughter, she’s a doctor!
+        high school together. Most weekends were spent at Annie’s where they often experimented with
+        new baking recipes and went on spontaneous late night drives.
+      </p>
+      <p>
+        Senior year, when Gel’s family moved to Virginia, she officially moved into Annie’s house to
+        finish out the school year in Sonoma. To this day, Annie’s parents enjoy bragging about the
+        accomplishments of their second daughter, she’s a doctor!
       </p>
     `,
   },
@@ -66,10 +75,20 @@ const BRIDESMAIDS = [
     title: 'Bridesmaid',
     headshot: '/bridal-party/tiff-cropped.jpg',
     description: html`
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
+      <p>
+        Annie and Tiff were introduced to each other shortly after joining the same sorority at
+        their first function. They quickly became friends and lived together for the rest of their
+        years at UCLA. Now that Tiff and Annie live on opposite coasts, Annie misses their impromptu
+        late night roomie dates at Denny’s, and laughing together the numerous times they would meet
+        up on campus to discover they were wearing matching outfits.
+      </p>
+
+      <p>
+        After graduation, Tiff became Annie’s most famous friend and is now a Weather Forecaster and
+        News/Sports Journalist. If you’re ever in California’s Central Valley, be sure to tune in to
+        ABC30! Annie hopes that one day they’ll end up in the same city and she can watch Tiff on
+        her local news channel, but for now she’ll settle with supporting her from afar.
+      </p>
     `,
   },
   {
@@ -77,10 +96,23 @@ const BRIDESMAIDS = [
     title: 'Bridesmaid',
     headshot: '/bridal-party/liz-cropped.jpg',
     description: html`
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
+      <p>
+        Though they had been introduced through mutual friends before, Liz and Annie’s acquaintance
+        turned into a true friendship when they began attending the same middle school.
+      </p>
+      <p>
+        Annie is still eternally grateful to have had Liz by her side when in 8th grade they were
+        forced against their will to take Drama, a class which culminated in a lip sync performance
+        of Defying Gravity in front of all their peers (yes Annie was Elphaba, and yes she had to
+        paint her face green).
+      </p>
+      <p>
+        While they attended colleges on opposite coasts, their friendship remained strong despite
+        Liz being notoriously hard to get a hold of. A trait that was exemplified when, during
+        COVID, Liz frequently lacked service while she completed a bike trip across the continental
+        United States, from Oregon to Virginia. Today, Annie is grateful that Liz is also a fellow
+        New Yorker and only lives a short subway ride away.
+      </p>
     `,
   },
   {
@@ -88,10 +120,21 @@ const BRIDESMAIDS = [
     title: 'Bridesmaid',
     headshot: '/bridal-party/iz-cropped.jpg',
     description: html`
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
+      <p>
+        Annie’s first memory with Iz was as relay race teammates during Sonoma’s annual Bear Flag
+        Track Meet. While their friendship began a few years later in middle school, it truly
+        solidified in their high school years.
+      </p>
+      <p>
+        After college, Annie unintentionally followed in Iz's footsteps. Iz had settled in Boston
+        after graduating from Tufts, and by coincidence, Annie’s new job brought her to Boston too.
+        Annie was incredibly thankful to have a built-in friend in her new city. Years later after
+        COVID, Annie and Iz ended up in the same city yet again, but this time NYC.
+      </p>
+      <p>
+        Today, Iz has become Annie’s most adventurous friend and travels all over the world. While
+        Annie misses having Iz close by, she loves keeping track of Iz’s travel adventures.
+      </p>
     `,
   },
   {
@@ -99,10 +142,20 @@ const BRIDESMAIDS = [
     title: 'Bridesmaid',
     headshot: '/bridal-party/liana-cropped.jpg',
     description: html`
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
+      <p>
+        Liana and Annie met through their sorority and lived together for half of college. Liana is
+        the life of the party and always up for anything. Some of Annie’s most memorable nights at
+        UCLA began with her and Liana planning on having a boring night in.
+      </p>
+      <p>
+        When Lucas and Annie moved to NYC in 2021, Liana was studying for her master’s at NYU. Annie
+        felt lucky to have Liana to join her on study dates and sneak her into the NYU library while
+        she studied for her actuarial exams.
+      </p>
+      <p>
+        Now that Liana is done with her studies (sadly Annie is not), they often meet up at popular
+        NYC restaurants instead of coffee shops.
+      </p>
     `,
   },
   {
@@ -110,10 +163,17 @@ const BRIDESMAIDS = [
     title: 'Bridesmaid',
     headshot: '/bridal-party/tess-cropped.jpg',
     description: html`
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
+      <p>
+        Tess is Lucas' youngest sister. She's made a habit out of copying both Lucas (becoming a
+        software engineer, starting a cross-country relationship after college with someone on the
+        East Coast) and Annie (joining a sorority, moving to Seattle, and being the rare woman in a
+        work environment with mostly men).
+      </p>
+      <p>
+        When Tess and Lucas are not discussing the latest challenges in software engineering, they
+        stay in touch by swapping monkey videos on Instagram Reels.
+      </p>
+      <p>Annie and Lucas are excited to have Tess by their side on their big day.</p>
     `,
   },
   {
@@ -121,10 +181,8 @@ const BRIDESMAIDS = [
     title: 'Bridesmaid',
     headshot: '/bridal-party/maddie-cropped.jpg',
     description: html`
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
+      <p>Maddie is the middle sister of Lucas' family.</p>
+      <p>Annie and Lucas are excited to have Maddie by their side on their big day.</p>
     `,
   },
 ].reverse();
@@ -158,7 +216,7 @@ const GROOMSMEN = [
   },
   {
     name: 'Alex Drabkin',
-    title: 'Officiant',
+    title: 'Groomsman',
     headshot: '/bridal-party/alex-cropped.jpg',
     description: html`
       <p>
