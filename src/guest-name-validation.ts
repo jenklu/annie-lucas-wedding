@@ -53,7 +53,9 @@ export const hashedNames: Record<string, Array<string>> = {
   'f952fba1136c219fbf1a8a82153bc86b650ac7c40de4266f30c98b21373820f7': welcomeReceptionSlugs,
   'b8ff8fe46e1c4a7838763f63eb27d3015bd5d1b9a71f7121155bd6a2414a3544': welcomeReceptionSlugs,
   '56dc829186a4b37f5e159022edfd87b1d828605f86555a836803d9bd4bdfaab8': welcomeReceptionSlugs,
-  '37279d005f7a497807341dc59c5d70836f49f1fe260d696f0d30cc922c54a0e6': welcomeReceptionSlugs,
+  'fb2598617e47eef3e2895e44f723d29a6fbe5fb378bbc08a8a9f98c8988e5b1f': welcomeReceptionSlugs,
+  // Duplicate of above with no umlaut
+  '8cf6cea15e068640cb83069c911a1689daee3fc2b58088a549e5ef57a3729b4a': welcomeReceptionSlugs,
   'e1032c33dfa8ba74b73d2d66e8388b5dbb7888137d23d9c6e074fd728a98e38b': welcomeReceptionSlugs,
   '820fc126336ef3a3efb3f9122cb97995d6b5e45e1a241ff71c2fdda585fd3137': weddingPartySlugs,
   'e53b0848aa11a7d3b03888d1ca9457044ab01434eef9c857a21dcb78e8c8535e': weddingOnlySlugs,
