@@ -176,23 +176,22 @@ const BRIDESMAIDS = [
     `,
   },
   {
-    name: 'Maddie Jenkins',
+    name: 'Madeline Jenkins',
     title: 'Bridesmaid',
     headshot: '/bridal-party/maddie-cropped.jpg',
     description: html`
       <p>
         Maddie is the middle sister of Lucas' family. Clearly Maddie didn't look up to Lucas as
-        much, since she branched out from software engineering and the west coast to study medicine
+        much, since she branched out from software engineering and the West Coast to study medicine
         in upstate NY.
       </p>
       <p>
-        She is the best costumed-guest at any party, whether it's a costume party or not. Her most
-        notable costume was
+        She is the best costumed-guest at any party, whether it's a costume party or not. One of her
+        best costumes was a rendition of
         <a href="/bridal-party/maddie-ben-franklin.png" target="_blank"
           >the saucy Benjamin Franklin impersonator from "The Office"</a
-        >, but she's not afraid to bust out a costume at any time of year.
+        >.
       </p>
-
       <p>
         While she'll have to settle for a bridesmaid's dress instead of a costume, Annie and Lucas
         are excited to have Maddie by their side on their big day.
@@ -529,6 +528,9 @@ export class WeddingPartyPage extends LitElement {
       z-index: 2;
       box-sizing: border-box;
       gap: 2vw;
+      background-image: url(/altar-trees-background.png);
+      background-repeat: repeat-x;
+      background-size: auto 100%;
     }
     .guidance {
       display: none;

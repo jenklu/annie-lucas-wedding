@@ -33,7 +33,7 @@ export class WeddingPartyCard extends LitElement {
       width: 25vw;
       height: 100%;
       margin: 0 2vw;
-      background: rgba(255, 255, 255, 0.35);
+      background: #8b9c87ac;
       border-radius: 24px;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
       padding: 1.2vw 0.5vw 0.5vw 0.5vw;
