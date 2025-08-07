@@ -3,7 +3,7 @@ import { customElement, state } from 'lit/decorators.js';
 import './wedding-navbar';
 import './entry-page';
 import './main.css';
-import { buttonStyles } from './styles.ts';
+import { buttonStyles, paragraphStyle } from './styles.ts';
 
 @customElement('bride-and-groom')
 export class BrideAndGroom extends LitElement {
@@ -13,79 +13,140 @@ export class BrideAndGroom extends LitElement {
   private pages = [
     html`
       <div class="page-content">
-        <svg width="25%" height="25%" viewBox="0 0 200 200">
-          <circle cx="100" cy="100" r="80" fill="#D2B48C" stroke="#8B4513" stroke-width="3" />
-          <text x="100" y="110" font-size="24" text-anchor="middle" fill="#8B4513">Page 1</text>
-        </svg>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h1>2017.1</h1>
+        <img src="/bride-and-groom/math-class.png" style="width:90%" />
+        <p>Annie and I met in Math 170A in Spring 2017.</p>
+        <p>
+          On the first day of class, Annie was sitting with some friends, and I happened to sit down
+          two seats away from her.
+        </p>
+        <p>
+          Right before class, our mutual friend Nava walked in and sat between us: "Do you guys know
+          each other?"
+        </p>
+        <p>We didn't...But thanks to Nava, we started hanging out and doing homework together.</p>
       </div>
     `,
     html`
       <div class="page-content">
-        <svg width="25%" height="25%" viewBox="0 0 200 200">
-          <circle cx="100" cy="100" r="80" fill="#D2B48C" stroke="#8B4513" stroke-width="3" />
-          <text x="100" y="110" font-size="24" text-anchor="middle" fill="#8B4513">Page 2</text>
-        </svg>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id magna.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id magna.</p>
+        <h1>2017.2</h1>
+        <img src="/bride-and-groom/rose-bowl-2017.png" style="align-self:center; height:15vh" />
+        <p>
+          By late spring, Annie and I had awkwardly, drunkenly held hands once while I walked her
+          back from a frat party, but we were otherwise "just friends".
+        </p>
+        <p>
+          I decided to give her a huge panic attack anyway by asking her to my frat formal. After
+          mulling it over with friends, Annie agreed to go and we had a blast. This grainy photo is
+          the only record of that first date.
+        </p>
       </div>
     `,
     html`
       <div class="page-content">
-        <svg width="25%" height="25%" viewBox="0 0 200 200">
-          <circle cx="100" cy="100" r="80" fill="#D2B48C" stroke="#8B4513" stroke-width="3" />
-          <text x="100" y="110" font-size="24" text-anchor="middle" fill="#8B4513">Page 3</text>
-        </svg>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id magna.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id magna.</p>
+        <h1>2017.3</h1>
+        <img src="/bride-and-groom/yosemite-2017.jpg" style="align-self:center; width:65%" />
+        <p>
+          After coming back for our junior year, on October 17th 2017, we decided to officially
+          "start dating".
+        </p>
+        <p>
+          We also took our first trip together later that fall, with a group of Annie's friends to
+          Yosemite. This was also my first time at Yosemite — lots of new territory!
+        </p>
       </div>
     `,
     html`
       <div class="page-content">
-        <svg width="25%" height="25%" viewBox="0 0 200 200">
-          <circle cx="100" cy="100" r="80" fill="#D2B48C" stroke="#8B4513" stroke-width="3" />
-          <text x="100" y="110" font-size="24" text-anchor="middle" fill="#8B4513">Page 4</text>
-        </svg>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id magna.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id magna.</p>
+        <h1>2018.1</h1>
+        <div style="height:fit-content;">
+          <img src="/bride-and-groom/date-party-2018.jpg" style="max-height:30vh;max-width:40%" />
+          <img
+            src="/bride-and-groom/old-people-party-2018.jpg"
+            style="max-height:30vh;max-width:40%;margin-left:10%"
+          />
+        </div>
+        <p>
+          In the first half of 2018, Annie and I really got to know each other. We had a blast
+          dressing up for each others' date parties and getting a sneak preview of what it might be
+          like to grow old together.
+        </p>
       </div>
     `,
     html`
       <div class="page-content">
-        <svg width="25%" height="25%" viewBox="0 0 200 200">
-          <circle cx="100" cy="100" r="80" fill="#D2B48C" stroke="#8B4513" stroke-width="3" />
-          <text x="100" y="110" font-size="24" text-anchor="middle" fill="#8B4513">Page 5</text>
-        </svg>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id magna.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id magna.</p>
+        <h1>2018.2</h1>
+        <div style="height:fit-content;">
+          <img src="/bride-and-groom/amsterdam-2018.jpg" style="max-width:30%;max-height:30vh" />
+          <img
+            src="/bride-and-groom/copenhagen-2018.jpg"
+            style="max-width:30%;max-height:30vh; margin-left:3%"
+          />
+          <img
+            src="/bride-and-groom/barcelona-2018.jpg"
+            style="max-width:30%;max-height:30vh; margin-left:3%"
+          />
+        </div>
+        <p>
+          Annie and I both got internships back in my hometown of Boston the 2018 summer. The
+          highlight of that summer was a trip to Amsterdam, Copenhagen, and Barcelona.
+        </p>
       </div>
     `,
     html`
       <div class="page-content">
-        <svg width="25%" height="25%" viewBox="0 0 200 200">
-          <circle cx="100" cy="100" r="80" fill="#D2B48C" stroke="#8B4513" stroke-width="3" />
-          <text x="100" y="110" font-size="24" text-anchor="middle" fill="#8B4513">Page 6</text>
-        </svg>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id magna.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id magna.</p>
+        <h1>2019.1</h1>
+        <div style="height:fit-content;">
+          <img src="/bride-and-groom/thailand-2019.jpg" style="max-width:30%;max-height:25vh" />
+          <img
+            src="/bride-and-groom/pinning-2019.jpg"
+            style="max-width:30%;max-height:25vh;margin-left:3%"
+          />
+          <img
+            src="/bride-and-groom/grad-2019.jpg"
+            style="max-width:30%;max-height:25vh;margin-left:3%"
+          />
+        </div>
+        <p>We made the most of our last couple quarters of college.</p>
+        <p>
+          After a spring break tour of Thailand, I "pinned" Annie, which in southern fraternity
+          speak means "we're going to get engaged in a couple months", but in California fraternity
+          apparently means "we're going to have a big party and then get engaged 5 years later".
+        </p>
       </div>
     `,
     html`
       <div class="page-content">
-        <svg width="25%" height="25%" viewBox="0 0 200 200">
-          <circle cx="100" cy="100" r="80" fill="#D2B48C" stroke="#8B4513" stroke-width="3" />
-          <text x="100" y="110" font-size="24" text-anchor="middle" fill="#8B4513">Page 7</text>
-        </svg>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id magna.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id magna.</p>
+        <h1>2019.2</h1>
+        <img
+          src="/bride-and-groom/flight-receipt-2019.png"
+          style="align-self:center;max-height:25vh"
+        />
+        <p>
+          After graduation, Annie and I made the tough decision to take jobs on opposite sides of
+          the country: the tech scene drew me to Annie's home region of the Bay Area, while Liberty
+          Mutual stole her away to my hometown of Boston.
+        </p>
+        <p>
+          Although the decision to swap hometowns was hard, the decision to try out long distance
+          wasn't. We committed to lots of BOS<>SFO travel and managed to see each other a couple
+          times a month.
+        </p>
+      </div>
+    `,
+    html`
+      <div class="page-content">
+        <h1>2020.1</h1>
+        <img
+          src="/bride-and-groom/annie-covid-2020.jpg"
+          style="align-self:center;max-height:25vh"
+        />
+        <p>
+          While most things in the world weren't great in the first half of 2020, Annie's decision
+          to move back to her parents' place in Sonoma while I was living in San Francisco made my
+          life a whole lot better.
+        </p>
+        <p>The beautiful outdoors of the Bay Area were a great respite from COVID-hunkering.</p>
       </div>
     `,
   ];
@@ -151,7 +212,7 @@ export class BrideAndGroom extends LitElement {
     return window.innerWidth >= 800;
   }
 
-  static styles = [
+  static localStyles = [
     buttonStyles,
     css`
       .book {
@@ -213,6 +274,11 @@ export class BrideAndGroom extends LitElement {
       }
       .page-content p {
         margin: 0;
+        color: #8b4513;
+        text-align: left;
+      }
+      .page-content h1 {
+        margin-bottom: 0px;
       }
       /* Gutter shadow on inner edge of each page */
       .page-content:first-child::after {
@@ -315,6 +381,7 @@ export class BrideAndGroom extends LitElement {
       }
     `,
   ];
+  static styles = [paragraphStyle, BrideAndGroom.localStyles];
 }
 
 declare global {
