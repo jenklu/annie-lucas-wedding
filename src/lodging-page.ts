@@ -66,6 +66,13 @@ export class LodgingPage extends LitElement {
             </li>
           </ul>
         </div>
+        <div class="roll-container">
+          <img
+            src="/roll.png"
+            class="roll"
+            @click="${() => window.location.assign('https://latlmes.com/breaking/dinner-rolls-1')}"
+          />
+        </div>
       </div>
     `;
   }
@@ -110,6 +117,26 @@ export class LodgingPage extends LitElement {
       & strong {
         font-weight: 700;
       }
+    }
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    .roll-container {
+      align-self: flex-end;
+      padding-right: 8px;
+      padding-bottom: 8px;
+    }
+    .roll {
+      height: 15px;
+      animation-name: spin;
+      animation-duration: 2000ms; /* Adjust for desired speed */
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
     }
   `;
   static styles = [LodgingPage.localStyles, paragraphStyle];
