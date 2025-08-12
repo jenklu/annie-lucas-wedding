@@ -139,7 +139,7 @@ export class BrideAndGroom extends LitElement {
         <h1>2020.1</h1>
         <img
           src="/bride-and-groom/2020-annie-covid.jpg"
-          style="align-self:center;max-height:25vh"
+          style="align-self:center;max-height:24vh"
         />
         <p>
           While most things in the world weren't great in the first half of 2020, Annie's decision
@@ -162,7 +162,7 @@ export class BrideAndGroom extends LitElement {
         </p>
         <img
           src="/bride-and-groom/2020-wine-tasting.jpg"
-          style="align-self:center;max-height:30vh"
+          style="align-self:center;max-height:25vh"
         />
       </div>
     `,
@@ -192,8 +192,8 @@ export class BrideAndGroom extends LitElement {
         <img src="/bride-and-groom/2021-bk-brewery.jpg" style="align-self:center;max-height:23vh" />
         <p>
           After our successful cohabitation experiment in Palm Springs, Annie and I decided to move
-          in together. Since Liberty Mutual was enforcing return-to-office and didn't have one in
-          the Bay, we needed to find a new city.
+          in together. Liberty Mutual was enforcing return-to-office and didn't have one in the Bay,
+          so we needed to find a new city.
         </p>
         <p>
           We checked out Seattle in July, but ultimately chose NYC. We moved back East and found a
@@ -216,7 +216,7 @@ export class BrideAndGroom extends LitElement {
         </p>
         <img
           src="/bride-and-groom/2022-catskills-selfie.jpg"
-          style="align-self:center;max-height:25vh"
+          style="align-self:center;max-height:22vh"
         />
       </div>
     `,
@@ -228,7 +228,7 @@ export class BrideAndGroom extends LitElement {
           <img src="/bride-and-groom/2023-annie-tennis.jpg" style="max-height:30vh;max-width:30%" />
           <img
             src="/bride-and-groom/2023-italy-colosseum.jpg"
-            style="max-height:30vh;max-width:65%;margin-left:5%"
+            style="max-height:30vh;max-width:62%;margin-left:5%"
           />
         </div>
         <p>
@@ -273,13 +273,27 @@ export class BrideAndGroom extends LitElement {
         <div style="height:fit-content;">
           <img
             src="/bride-and-groom/2024-texts-with-laura.jpg"
-            style="max-height:33vh;max-width:40%"
+            style="max-height:33vh;max-width:44%"
           />
           <img
             src="/engagement-photos/DSC00786-AH Portraits.jpg"
-            style="max-height:33vh;max-width:59%"
+            style="max-height:33vh;max-width:52%"
           />
         </div>
+      </div>
+    `,
+    html`
+      <div class="page-content">
+        <h1>2025.2</h1>
+        <p>
+          Wedding planning has been a focus of 2025, but we still managed to check off one more
+          state each this year. Annie hit #28 with Florida in February. I was one back for a month,
+          but caught up on a golf trip (without her) to South Carolina.
+        </p>
+        <img
+          src="/bride-and-groom/2025-states-visited.jpg"
+          style="align-self:center;max-height:24vh"
+        />
       </div>
     `,
     html`<div class="page-content">
