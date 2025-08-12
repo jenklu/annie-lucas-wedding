@@ -38,7 +38,7 @@ export class EntryPage extends LitElement {
     e.preventDefault();
     this.classList.add('fade-out');
     const input = this.shadowRoot?.querySelector('#firstAndLast') as HTMLInputElement;
-    localStorage.setItem('firstAndLast', input.value.toLowerCase());
+    localStorage.setItem('firstAndLast', input.value);
     window.location.reload();
   }
 

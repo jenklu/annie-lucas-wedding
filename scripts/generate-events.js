@@ -60,10 +60,14 @@ async function sha256Hex(input) {
   for (const row of rows) {
     const first = row['first name']?.trim() ?? '';
     const last = row['last name']?.trim() ?? '';
-    if (!first || !last) continue; // skip blank lines / partial rows
+    if (!first || !last) {
+      console.error(`No first or last name in the row: ${row}`);
+    } // skip blank lines / partial rows
 
     const tagsStr = (row.tags || '').toLowerCase();
-    const hashKey = await sha256Hex(`${first} ${last}`.toLowerCase()); // mirrors browser logic
+    const nameNoPunct = `${first}${last}`.replace(/\W/g, '').toLowerCase();
+
+    const hashKey = await sha256Hex(nameNoPunct); // mirrors browser logic
 
     /* decide invitation list */
     let bucket = 'weddingOnly';
@@ -104,10 +108,10 @@ async function sha256Hex(input) {
     ...Object.entries(hashedNames).map(([h, arr]) => {
       const ref =
         arr === weddingOnly
-          ? 'weddingOnly'
+          ? 'weddingOnlySlugs'
           : arr === welcomeReception
-            ? 'welcomeReception'
-            : 'weddingParty';
+            ? 'welcomeReceptionSlugs'
+            : 'weddingPartySlugs';
       return `  '${h}': ${ref},`;
     }),
     '};',
