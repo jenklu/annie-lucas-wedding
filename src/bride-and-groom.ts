@@ -284,7 +284,7 @@ export class BrideAndGroom extends LitElement {
     `,
     html`
       <div class="page-content">
-        <h1>2025.2</h1>
+        <h1>2025.1</h1>
         <p>
           Wedding planning has been a focus of 2025, but we still managed to check off one more
           state each this year. Annie hit #28 with Florida in February. I was one back for a month,
