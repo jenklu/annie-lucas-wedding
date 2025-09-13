@@ -64,7 +64,7 @@ export class GettingThere extends LitElement {
             Fairfax, CA 94930.
           </p>
           <p>
-            On the day of the wedding, shuttles wil be available between the hotel block in downtown
+            On the day of the wedding, shuttles will be available between the hotel block in downtown
             San Rafael and the venue.
           </p>
           <p>
