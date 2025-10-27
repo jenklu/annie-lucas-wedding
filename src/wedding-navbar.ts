@@ -47,7 +47,6 @@ export class WeddingNavbar extends LitElement {
     const unfinished: Record<string, boolean> = {
       rsvp: true,
       registry: true,
-      'dress-code': true,
       travel: true, // parent, actual travel info main page doesn't exist
       'local-recommendations': true,
       'people-and-pics': true, // parent, people-and-pics landing doesn't exist

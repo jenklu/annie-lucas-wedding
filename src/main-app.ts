@@ -12,6 +12,7 @@ import { WeddingPartyPage } from './wedding-party-page';
 import { BrideAndGroom } from './bride-and-groom';
 import { LodgingPage } from './lodging-page';
 import { hashName, hashedNames } from './guest-name-validation';
+import { DressCode } from './dress-code-faq';
 
 /**
  * The root of the application
@@ -75,6 +76,8 @@ export class MainApp extends LitElement {
         return new GettingThere();
       case '#/travel/lodging':
         return new LodgingPage();
+      case '#/dress-code':
+        return new DressCode();
       case '':
       case '#/home':
       default:
