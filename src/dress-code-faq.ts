@@ -14,7 +14,7 @@ export class DressCode extends LitElement {
             The dress code for the wedding is Garden Formal. We are excited to share the special day
             with everyone and care more about your presence than your attire.
           </p>
-          <p>Here are some suggestions for attire:</p>
+          <p>Here are some recommendations:</p>
           <p>Men: Any color suit and tie.</p>
           <p>
             Ladies: Mid- to floor-length dresses or dressy jumpsuits. Note that some areas of Deer
