@@ -428,7 +428,7 @@ export class BrideAndGroom extends LitElement {
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        overflow: visible; /* to ensure shadows appear above and below */
+        overflow: scroll; /* to ensure shadows appear above and below */
       }
       .page-content p {
         margin: 0;
@@ -542,7 +542,7 @@ export class BrideAndGroom extends LitElement {
         }
         .book {
           top: 18vh;
-          height: 65vh;
+          height: 62vh;
           background: #ab99af;
         }
       }
