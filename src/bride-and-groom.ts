@@ -542,7 +542,7 @@ export class BrideAndGroom extends LitElement {
         }
         .book {
           top: 18vh;
-          height: 62vh;
+          height: 65vh;
           background: #ab99af;
         }
       }
