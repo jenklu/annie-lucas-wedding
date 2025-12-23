@@ -278,6 +278,9 @@ export const hashedNames: Record<string, Array<string>> = {
   '3efb76bf2018bd25aaaaa20589bfc59eb46ab7e677323a8160e14bc491bbfd37': welcomeReceptionSlugs,
   '5b3da82a4ea44556808a07178de8cde1daaafa9d569875330ffe1eebf67a98e3': welcomeReceptionSlugs,
   'cca955a9490023f4490b3b49d372a3b282ff1f2128bd710daa275c1cd3faafeb': welcomeReceptionSlugs,
+  '4c0ad4ac3fe3280f896f6393e13027beb52aa8bf9009607be5d6a82c0f64bf45': welcomeReceptionSlugs,
+  '915da55014bab620bf2afd9da5320788d9694c7a1aae2c577a129a2f7b3b922d': welcomeReceptionSlugs,
+  'dafc49c4d7983dc034e5abb59b283c6cacb1097e7936511517b278ec0811505f': welcomeReceptionSlugs,
 };
 
 export async function hashName(name: string): Promise<string> {
