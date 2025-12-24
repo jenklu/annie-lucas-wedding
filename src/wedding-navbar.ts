@@ -45,7 +45,6 @@ export class WeddingNavbar extends LitElement {
   render() {
     // Map of unfinished pages (routes that do not exist yet)
     const unfinished: Record<string, boolean> = {
-      rsvp: true,
       registry: true,
       travel: true, // parent, actual travel info main page doesn't exist
       'local-recommendations': true,
@@ -54,6 +53,7 @@ export class WeddingNavbar extends LitElement {
 
     // Define your navigation structure (now includes "home" at front)
     const NAV = [
+      { label: 'RSVP', key: 'rsvp' },
       { label: 'Registry', key: 'registry' },
       { label: 'Schedule', key: 'schedule' },
       { label: 'Dress Code', key: 'dress-code' },
@@ -88,16 +88,6 @@ export class WeddingNavbar extends LitElement {
             >
               <img id="home-icon" src="/home.svg" />
             </button>
-            <lucas-tooltip id="rsvp" text="Coming soon!">
-              <div
-                class="main-tab ${this._activeTab === 'rsvp' && 'active'}"
-                @click="${() => this._navigate('rsvp', '', true)}"
-                tabindex="0"
-                role="button"
-              >
-                RSVP
-              </div>
-            </lucas-tooltip>
           </div>
           ${NAV.map(
             (tab) => html`
