@@ -283,6 +283,22 @@ export const hashedNames: Record<string, Array<string>> = {
   'dafc49c4d7983dc034e5abb59b283c6cacb1097e7936511517b278ec0811505f': welcomeReceptionSlugs,
   'e633b0ede76b8c4b7c677a97c3eb20bd1b62850dcd53f1be030e71bb5b866cba': welcomeReceptionSlugs,
   '8825ce5990833ac4cb089bd2049c99203ea0fe895c85cadbe66548d06809ade9': welcomeReceptionSlugs,
+  '562efc07df33c7d5c0c0ecb48bd48d6fa88e80f3b55d60a740732f578cdcca2d': welcomeReceptionSlugs,
+  '49b12d5a19cdc51e27124b56e67807888f2bb1eff0f65311b306d157ad2c69d9': welcomeReceptionSlugs,
+  '5cf656783a026f7664b19db873c3021724e2e4476c231cd48cca42d9e3d6d575': welcomeReceptionSlugs,
+  'a8da011fc39dfd9232e592168702ff99f8ec4cea0198296c6a863e202b48e4d7': weddingPartySlugs,
+  '4b3975d9fd1a195bda9daa0c09a41d5dc90b5fac32a774c11a162913c4c9d00d': welcomeReceptionSlugs,
+  'cb3b5ae484f8e83b04529c3dc5e6f53db24a065b7d6e409c5bd21a4cb9075835': welcomeReceptionSlugs,
+  '152946c1acdb6a53153c30ff71253107ce7ec5b29332ce3733c44086e3f7544c': welcomeReceptionSlugs,
+  'e5cfc0a06eacf0f72ee1ffd969406787c0c887f24b2f90dacd3736ec6b5852e7': welcomeReceptionSlugs,
+  '974ed0df081a237c670d08588b7f88af94b4503a1694c936f604e59070761ee0': welcomeReceptionSlugs,
+  '8fa0a39437f1de1bfad45b13778bcd283247252b6a4d9e4ca20e760efdd057eb': welcomeReceptionSlugs,
+  '9341ea505ea9af47616984223702122cecb82d5b404f70799e3fface7dd9fc8d': welcomeReceptionSlugs,
+  '72a8f6698047469a3932fd738a5ed4d9929cd59d8cb6b7617a264405d7ed3f2d': welcomeReceptionSlugs,
+  'a0fd408311d1e1817c8ea4c9fcaf776bbcc8adf59a23040d7e237ef1a259b018': welcomeReceptionSlugs,
+  'dcf716945b64e4930dda414210f982e7386e107d31bd4eceab11ea2e89819aa5': welcomeReceptionSlugs,
+  '0beb89b2253823278822f594daf64f4e0d2c54f6433a7317134073fb637ab02f': welcomeReceptionSlugs,
+  '8e5658c3c7da2bde143b3cf7afec3f99cbc5e66aa8f5b26d11cee8c5dfc2c9a3': welcomeReceptionSlugs,
 };
 
 export async function hashName(name: string): Promise<string> {
