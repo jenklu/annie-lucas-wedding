@@ -17,14 +17,24 @@ export class SchedulePage extends LitElement {
     {
       slug: 'rehearsal-dinner',
       title: 'Rehearsal Dinner',
-      time: 'TBA early evening, Friday June 19th, 2026',
-      location: 'TBA, San Rafael',
+      time: '5 PM, Friday June 19th, 2026',
+      location: html`<a
+        href="https://maps.app.goo.gl/xtaCnqyPnZcxYXTa8"
+        target="_blank"
+        rel="noopener noreferrer"
+        >San Rafael Joe's</a
+      >`,
     },
     {
       slug: 'welcome-party',
       title: 'Welcome Party',
-      time: 'TBA evening, Friday June 19th, 2026',
-      location: 'TBA, San Rafael',
+      time: '8 - 10:30 PM, Friday June 19th, 2026',
+      location: html`<a
+        href="https://maps.app.goo.gl/nH6NU7JG9bDtbkRj9"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Pond Farm Brewing, San Rafael</a
+      >`,
     },
     {
       slug: 'wedding',
@@ -46,7 +56,7 @@ export class SchedulePage extends LitElement {
           target="_blank"
           rel="noopener noreferrer"
           >Mac's at 19 Broadway, Fairfax</a
-        >.
+        >
         <br />
         NOTE: There will be a bus from Deer Park to Mac's for those interested`,
     },
