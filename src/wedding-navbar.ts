@@ -45,7 +45,6 @@ export class WeddingNavbar extends LitElement {
   render() {
     // Map of unfinished pages (routes that do not exist yet)
     const unfinished: Record<string, boolean> = {
-      registry: true,
       travel: true, // parent, actual travel info main page doesn't exist
       'local-recommendations': true,
       'people-and-pics': true, // parent, people-and-pics landing doesn't exist
