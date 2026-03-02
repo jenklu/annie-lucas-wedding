@@ -95,7 +95,6 @@ export class MainApp extends LitElement {
     this.classList.toggle('logged-in', this._isLoggedIn);
 
     if (!this._isLoggedIn) {
-      history.replaceState(null, '', location.origin);
       return html`<entry-page class="fade-in"></entry-page>`;
     }
     return html`
