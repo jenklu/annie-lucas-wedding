@@ -21,19 +21,19 @@ const REGIONS: Region[] = [
   {
     label: 'Marin',
     key: 'marin',
-    color: '#677248',
+    color: 'rgba(103, 114, 72, 0.7)',
     items: [
       {
         name: 'Marin Headlands',
-        url: 'https://maps.google.com/?cid=12530362365427438710',
+        url: 'https://www.nps.gov/goga/marin-headlands.htm',
         description:
           'A great place for views of the Golden Gate Bridge and Pacific Ocean. Parking can be tough to find but on a clear day the views are worth it!',
       },
       {
-        name: 'Mount Tamalpais',
-        url: 'https://maps.google.com/?cid=7211974297264181794',
+        name: 'Sol Food',
+        url: 'https://www.solfoodrestaurant.com/',
         description:
-          'Known locally as "Mount Tam," this iconic peak offers sweeping views of the Pacific Ocean, San Francisco Bay, and even the Farallon Islands on a clear day. Mountain biking originated here and there are scenic biking and hiking trail options for all levels.',
+          'A San Rafael staple for Puerto Rican food, in walking distance from the hotel block. ',
       },
       {
         name: 'Muir Woods',
@@ -49,7 +49,7 @@ const REGIONS: Region[] = [
       },
       {
         name: 'Point Reyes National Seashore',
-        url: 'https://maps.google.com/?cid=9461532645721595197',
+        url: 'https://www.nps.gov/pore/index.htm',
         description:
           "If you're up for a drive, head out to the National Seashore. There are great hiking options with some of the most impressive views of the Pacific you'll ever find. You have a great chance of seeing Tule Elk walking around, too.",
       },
@@ -58,7 +58,7 @@ const REGIONS: Region[] = [
   {
     label: 'San Francisco',
     key: 'sf',
-    color: '#FD5A1E',
+    color: 'rgba(191, 53, 43, 0.7)',
     items: [
       {
         name: 'Crissy Field / Palace of Fine Arts',
@@ -68,13 +68,13 @@ const REGIONS: Region[] = [
       },
       {
         name: 'Presidio Golf Course',
-        url: 'https://maps.google.com/?cid=4878412427118022467',
+        url: 'https://www.presidiogolf.com/',
         description:
           "For hilly golf and striking Eucalyptus trees, check out Lucas's favorite golf course!",
       },
       {
         name: 'Alcatraz Island',
-        url: 'https://maps.google.com/?cid=15084882416593688741',
+        url: 'https://www.nps.gov/alca/planyourvisit/fees.htm',
         description:
           "Book tickets to catch a ferry and tour of the infamous prison. This was one of Annie's favorite field trip locations.",
       },
@@ -85,22 +85,30 @@ const REGIONS: Region[] = [
           'A Bay Area staple with multiple locations, try Annie and Lucas\'s favorite drink: the iced Mint Mojito (ask for it "slightly sweet" if you like less sugar).',
       },
       {
-        name: 'Exploratorium',
-        url: 'https://maps.google.com/?cid=802656663955829184',
-        description: 'A fun and interactive science museum, great for all ages.',
+        name: 'California Academy of Sciences',
+        url: 'https://www.calacademy.org/',
+        description:
+          'A natural history and science museum with exhibits for all ages. A great jumping off point for a walk around Golden Gate Park.',
       },
     ],
   },
   {
     label: 'Sonoma',
     key: 'sonoma',
-    color: '#ab99af',
+    color: 'rgba(171, 153, 175, 0.8)',
     items: [
       {
         name: 'Sonoma Plaza',
         url: 'https://www.sonomavalley.com/things-to-do/attractions/sonoma-plaza/',
         descriptionHtml:
-          'The historic downtown of Sonoma (California\'s famous Bear Flag was first raised here), now a bustling business district. Aside from the beautiful architecture and numerous shops/restaurants, a number of Annie\'s favorite wineries like <a href="https://maps.google.com/?cid=8015915211475609111" target="_blank" rel="noopener">Roche Winery</a> (great outdoor seating if it\'s nice out) and <a href="https://maps.google.com/?cid=11274371147951220506" target="_blank" rel="noopener">Capo Isetta</a> have tasting rooms on the Plaza. A great option if you don\'t have time to go all the way out to a winery, and/or just want to grab a glass before dinner.',
+          "The historic downtown of Sonoma (California's famous Bear Flag was first raised " +
+          'here), now a great place to stroll around and take in the old Spanish architecture. ' +
+          "Aside from the shops and restaurants, a number of Annie's favorite wineries like " +
+          '<a href="https://maps.google.com/?cid=8015915211475609111" target="_blank" rel="noopener">Roche Winery</a> ' +
+          "(great outdoor seating if it's nice out) and " +
+          '<a href="https://maps.google.com/?cid=11274371147951220506" target="_blank" rel="noopener">Capo Isetta</a> ' +
+          "have tasting rooms on the Plaza. A great option if you don't have time to go all the way " +
+          'out to a winery, and/or just want to grab a glass before dinner.',
       },
       {
         name: 'Sonoma Overlook Trail',
@@ -191,7 +199,7 @@ export class LocalRecommendations extends LitElement {
                   ? html`<p .innerHTML="${item.descriptionHtml}"></p>`
                   : html`<p>${item.description}</p>`}
                 <a class="maps-link" href="${item.url}" target="_blank" rel="noopener">
-                  Open in Maps
+                  More info
                 </a>
               </div>
             `
