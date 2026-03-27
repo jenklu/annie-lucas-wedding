@@ -14,6 +14,7 @@ import { LodgingPage } from './lodging-page';
 import { hashName, hashedNames } from './guest-name-validation';
 import { DressCode } from './dress-code-faq';
 import { RegistryPage } from './registry-page';
+import { RSVPPage } from './rsvp-page';
 import { LocalRecommendations } from './local-recommendations';
 
 /**
@@ -84,6 +85,8 @@ export class MainApp extends LitElement {
         return new DressCode();
       case '#/registry':
         return new RegistryPage();
+      case '#/rsvp':
+        return new RSVPPage();
       case '':
       case '#/home':
       default:
