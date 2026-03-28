@@ -1,9 +1,11 @@
 import { LitElement, html, css } from 'lit';
-import { customElement } from 'lit/decorators.js';
+import { customElement, state } from 'lit/decorators.js';
 import { paragraphStyle } from './styles';
 
 @customElement('lodging-page')
 export class LodgingPage extends LitElement {
+  @state() private parkingExpanded = false;
+
   render() {
     return html`
       <div class="page-container">
@@ -39,6 +41,75 @@ export class LodgingPage extends LitElement {
             We can expand the room block if it starts to fill up, but it becomes more difficult to
             do so as the wedding date approaches.
           </p>
+          <div class="parking-section">
+            <div class="parking-inline">
+              <strong>Parking Options:</strong>
+              <span class="dot">·</span>
+              <a
+                href="https://www.marriott.com/en-us/hotels/sfoar-ac-hotel-san-rafael-downtown/overview/"
+                target="_blank"
+                >Hotel Parking</a
+              >
+              <span class="dot">·</span>
+              <a
+                href="https://www.cityofsanrafael.org/downtown-parking-locations-costs/"
+                target="_blank"
+                >City Garages</a
+              >
+              <span class="dot">·</span>
+              <button
+                class="parking-toggle"
+                @click="${() => (this.parkingExpanded = !this.parkingExpanded)}"
+              >
+                More Info ${this.parkingExpanded ? '▾' : '◂'}
+              </button>
+            </div>
+            ${this.parkingExpanded
+              ? html`
+                  <div class="parking-detail">
+                    <p>
+                      <strong>On-site (AC Hotel):</strong> Covered parking is available for
+                      approximately $29–$30 per day. Limited spaces — bottom lot 30, top lot 20.
+                    </p>
+                    <p>
+                      <strong
+                        ><a
+                          href="https://www.cityofsanrafael.org/downtown-parking-locations-costs/#/maps-1/map/parking-garage/details/4958"
+                          target="_blank"
+                          >A Street Parking Garage</a
+                        ></strong
+                      >
+                      (3 min walk) — 951 A St, San Rafael, CA 94901<br />
+                      $1/hr, $10 daily max. Enter/exit on B St (one-way) or A St. Pay at the walk-up
+                      pay station before leaving. EV charging on level 1.
+                    </p>
+                    <p>
+                      <strong
+                        ><a
+                          href="https://www.cityofsanrafael.org/downtown-parking-locations-costs/#/maps-1/map/parking-garage/details/4889"
+                          target="_blank"
+                          >C Street Parking Garage</a
+                        ></strong
+                      >
+                      (3 min walk) — 977 C St, San Rafael, CA 94901<br />
+                      $1/hr, $10 daily max. Enter/exit on B St (one-way) or C St. Pay at the walk-up
+                      pay station before leaving. EV charging on level 1.
+                    </p>
+                    <p>
+                      <strong>Overnight parking:</strong> For 1–3 nights, you may park in the A or C
+                      Street garages for $10/day. Parking is not allowed in the same spot for more
+                      than 72 hours.
+                    </p>
+                    <p>
+                      <strong>Weekend &amp; holiday note:</strong> City-owned lots and street
+                      parking are <strong>free on Sundays and holidays</strong>. Friday, June 19 is
+                      a City of San Rafael holiday — city lots will be free that day. Saturday
+                      parking is enforced 8:00 am – 6:00 pm.
+                    </p>
+                  </div>
+                `
+              : ''}
+          </div>
         </div>
         <h1>Other Options</h1>
         <div class="content">
@@ -125,6 +196,44 @@ export class LodgingPage extends LitElement {
       to {
         transform: rotate(360deg);
       }
+    }
+    .parking-section {
+      margin-top: 1rem;
+    }
+    .parking-inline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      align-items: center;
+      justify-content: center;
+      font-family: 'EB Garamond', sans-serif;
+      font-weight: 300;
+    }
+    .dot {
+      color: rgba(0, 0, 0, 0.4);
+    }
+    .parking-toggle {
+      font-family: 'EB Garamond', sans-serif;
+      font-weight: 300;
+      font-size: inherit;
+      padding: 0.1em 0.5em;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      background: rgba(255, 255, 255, 0.25);
+      cursor: pointer;
+    }
+    .parking-toggle:hover {
+      background: rgba(255, 255, 255, 0.4);
+    }
+    .parking-detail {
+      margin-top: 0.75rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.2);
+      text-align: left;
+    }
+    .parking-detail p {
+      margin: 0.5rem 0;
+      text-align: left;
     }
     .roll-container {
       align-self: flex-end;
