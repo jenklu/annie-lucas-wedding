@@ -1,6 +1,12 @@
 export const weddingOnlySlugs = ['wedding', 'after-party'];
 export const welcomeReceptionSlugs = ['welcome-party', 'wedding', 'after-party'];
-export const weddingPartySlugs = ['rehearsal-dinner', 'welcome-party', 'wedding', 'after-party'];
+export const weddingPartySlugs = [
+  'rehearsal-dinner',
+  'welcome-party',
+  'wedding',
+  'after-party',
+  'breakfast',
+];
 // prettier-ignore
 export const hashedNames: Record<string, Array<string>> = {
   'd2b89ef001078156ee9fe40c14eb24a672680d1714cc6612f03235f2425a325e': welcomeReceptionSlugs,

@@ -51,7 +51,6 @@ export class WeddingNavbar extends LitElement {
 
     // Define your navigation structure (now includes "home" at front)
     const NAV = [
-      { label: 'RSVP', key: 'rsvp' },
       { label: 'Registry', key: 'registry' },
       { label: 'Schedule', key: 'schedule' },
       { label: 'Dress Code', key: 'dress-code' },
@@ -86,6 +85,15 @@ export class WeddingNavbar extends LitElement {
             >
               <img id="home-icon" src="/home.svg" />
             </button>
+            <div
+              id="rsvp"
+              class="main-tab ${this._activeTab === 'rsvp' ? 'active' : ''}"
+              @click="${() => this._navigate('rsvp')}"
+              tabindex="0"
+              role="button"
+            >
+              RSVP
+            </div>
           </div>
           ${NAV.map(
             (tab) => html`

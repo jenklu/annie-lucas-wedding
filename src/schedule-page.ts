@@ -74,12 +74,15 @@ export class SchedulePage extends LitElement {
       > `,
       notes: `There will be a bus from Deer Park to Mac's for those interested`,
     },
-    // {
-    //   slug: 'brunch',
-    //   title: 'Brunch',
-    //   time: 'TBA Late Morning, Sunday June 21st, 2026',
-    //   location: 'TBA, San Rafael',
-    // },
+    {
+      slug: 'breakfast',
+      title: 'Breakfast',
+      time: '9:00 - 11:00 AM',
+      date: 'Sunday June 21st, 2026',
+      location: 'AC San Rafael Downtown, Downstairs Courtyard',
+      notes:
+        'We are hosting the wedding party and close family for brunch at the hotel the next day',
+    },
   ];
 
   render() {
