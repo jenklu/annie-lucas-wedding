@@ -44,7 +44,14 @@ export class HomePage extends LitElement {
         <h1>Annie Thornton & Lucas Jenkins</h1>
         <h4>June 20, 2026</h4>
         <h4>
-          <button id="venue-button" @click="${this.showVenueDialog}">Deer Park Villa</button>
+          <button
+            id="venue-button"
+            type="button"
+            aria-label="Read the story of Deer Park Villa"
+            @click="${this.showVenueDialog}"
+          >
+            Deer Park Villa
+          </button>
           <br />
           Fairfax, California
         </h4>
@@ -103,6 +110,37 @@ export class HomePage extends LitElement {
     #wedding-info h4 {
       font-size: 2rem;
       margin: 0.5rem 0;
+    }
+
+    /* Reads as a tappable control on the hero photo, not just heading text */
+    #venue-button {
+      border: 1px solid rgba(255, 255, 255, 0.95);
+      box-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.28),
+        0 1px 2px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+      transition:
+        box-shadow 0.2s ease,
+        transform 0.15s ease;
+    }
+
+    #venue-button:hover {
+      box-shadow:
+        0 5px 14px rgba(0, 0, 0, 0.35),
+        0 2px 6px rgba(0, 0, 0, 0.22);
+      transform: translateY(-1px);
+    }
+
+    #venue-button:active {
+      transform: translateY(0);
+      box-shadow:
+        0 1px 4px rgba(0, 0, 0, 0.3),
+        inset 0 1px 2px rgba(0, 0, 0, 0.12);
+    }
+
+    #venue-button:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 3px;
     }
 
     p {
