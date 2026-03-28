@@ -29,7 +29,7 @@ export class LodgingPage extends LitElement {
             will include the group code.
           </p>
           <p>
-            This hotel is a 10 minute drive from the wedding venue, and the buses on wedding day
+            This hotel is a 15 minute drive from the wedding venue, and the buses on wedding day
             will depart from and return to the hotel. In the heart of downtown San Rafael, it's a
             short walk from the welcome party location as well as shops, cafes, and restaurants.
           </p>
