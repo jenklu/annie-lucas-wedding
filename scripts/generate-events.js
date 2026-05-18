@@ -21,6 +21,7 @@ import crypto from 'crypto';
 /* ------------------------------------------------------------------ */
 const weddingOnly = ['wedding', 'after-party'];
 const welcomeReception = ['welcome-party', 'wedding', 'after-party'];
+const breakfastAndWelcome = ['welcome-party', 'wedding', 'after-party', 'breakfast'];
 const weddingParty = ['all']; // full access
 
 /* ------------------------------------------------------------------ */
@@ -53,7 +54,7 @@ async function sha256Hex(input) {
 
   /* 2. build map + gather validation info */
   const hashedNames = {};
-  const stats = { weddingOnly: 0, welcomeReception: 0, weddingParty: 0 };
+  const stats = { weddingOnly: 0, welcomeReception: 0, breakfastAndWelcome: 0, weddingParty: 0 };
   const issues = []; // rows whose tags conflict with mapping
   const dupes = new Map(); // hash → [name1, name2]
 
@@ -72,6 +73,7 @@ async function sha256Hex(input) {
     /* decide invitation list */
     let bucket = 'weddingOnly';
     if (tagsStr.includes('wedding party')) bucket = 'weddingParty';
+    else if (tagsStr.includes('breakfast invites')) bucket = 'breakfastAndWelcome';
     else if (tagsStr.includes('welcome reception')) bucket = 'welcomeReception';
 
     stats[bucket]++;
@@ -83,15 +85,20 @@ async function sha256Hex(input) {
       dupes.set(hashKey, list);
     }
 
-    hashedNames[hashKey] = { weddingOnly, welcomeReception, weddingParty }[bucket];
+    hashedNames[hashKey] = { weddingOnly, welcomeReception, breakfastAndWelcome, weddingParty }[bucket];
 
     /* lightweight rule check */
     const expected =
       (bucket === 'weddingOnly' &&
         !tagsStr.includes('welcome reception') &&
+        !tagsStr.includes('breakfast invites') &&
         !tagsStr.includes('wedding party')) ||
       (bucket === 'welcomeReception' &&
         tagsStr.includes('welcome reception') &&
+        !tagsStr.includes('breakfast invites') &&
+        !tagsStr.includes('wedding party')) ||
+      (bucket === 'breakfastAndWelcome' &&
+        tagsStr.includes('breakfast invites') &&
         !tagsStr.includes('wedding party')) ||
       (bucket === 'weddingParty' && tagsStr.includes('wedding party'));
 
@@ -100,9 +107,10 @@ async function sha256Hex(input) {
 
   /* 3. emit copy-paste snippet */
   const snippetLines = [
-    "const weddingOnly      = ['wedding', 'after-party'];",
-    "const welcomeReception = ['welcome-party', 'wedding', 'after-party'];",
-    "const weddingParty     = ['all'];",
+    "const weddingOnly         = ['wedding', 'after-party'];",
+    "const welcomeReception    = ['welcome-party', 'wedding', 'after-party'];",
+    "const breakfastAndWelcome = ['welcome-party', 'wedding', 'after-party', 'breakfast'];",
+    "const weddingParty        = ['all'];",
     '',
     'const hashedNames = {',
     ...Object.entries(hashedNames).map(([h, arr]) => {
@@ -111,7 +119,9 @@ async function sha256Hex(input) {
           ? 'weddingOnlySlugs'
           : arr === welcomeReception
             ? 'welcomeReceptionSlugs'
-            : 'weddingPartySlugs';
+            : arr === breakfastAndWelcome
+              ? 'breakfastAndWelcomeSlugs'
+              : 'weddingPartySlugs';
       return `  '${h}': ${ref},`;
     }),
     '};',

@@ -77,11 +77,11 @@ export class SchedulePage extends LitElement {
     {
       slug: 'breakfast',
       title: 'Breakfast',
-      time: '9:00 - 11:00 AM',
+      time: '9:30 - 11:30 AM',
       date: 'Sunday June 21st, 2026',
       location: 'AC San Rafael Downtown, Downstairs Courtyard',
       notes:
-        'We are hosting the wedding party and close family for brunch at the hotel the next day',
+        'We are hosting a casual breakfast for the wedding party and out-of-town guests staying at the hotel. Stop by whenever to grab some coffee and breakfast.',
     },
   ];
 
