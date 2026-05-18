@@ -7,22 +7,35 @@ export class RSVPPage extends LitElement {
   render() {
     return html`
       <div class="page-container">
-        <iframe class="rsvp-iframe" src="https://withjoy.com/annie-and-lucas-jun-26/rsvp"></iframe>
+        <div class="rsvp-closed">
+          <p>RSVPs are closed. We're excited to see everyone soon!</p>
+        </div>
       </div>
     `;
   }
 
   static localStyles = css`
-    .rsvp-iframe {
-      margin-top: 5vh;
-      width: 90vw;
-      height: 75vh;
-    }
     .page-container {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      padding: 2rem;
+      min-height: 70vh;
+    }
+    .rsvp-closed {
+      margin: 0 auto;
+      max-width: 800px;
+      width: 100%;
+      background-color: #ab99af;
+      border-radius: 5px;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    .rsvp-closed p {
+      font-size: 2rem;
+      margin: 0;
     }
     @keyframes fadeIn {
       from {
@@ -43,9 +56,14 @@ export class RSVPPage extends LitElement {
     }
 
     @media (max-width: 1270px) {
-      .rsvp-iframe {
+      .page-container {
+        padding: 1rem;
+      }
+      .rsvp-closed {
         margin-top: 2vh;
-        height: 65vh;
+      }
+      .rsvp-closed p {
+        font-size: 1.5rem;
       }
     }
   `;
