@@ -375,6 +375,28 @@ const GROOMSMEN = [
       </p>
     `,
   },
+  {
+    name: 'Jack Stone',
+    title: 'Groomsman',
+    headshot: '/bridal-party/jack-cropped.jpg',
+    description: html`
+      <p>
+        Jack and Lucas got to know each other in middle school through music and a Nashoba Valley
+        ski program. As with Oliver, their friendship truly solidified when they trauma bonded
+        through AP Bio.
+      </p>
+      <p>
+        Jack was one of the first people Lucas knew who moved to New York City. When Lucas visited
+        in 2017, Jack showed him for the first time that there was more to the city than the grime
+        and throngs of Midtown. And on Lucas' 2021 visit, Jack successfully made the pitch to move
+        out to New York.
+      </p>
+      <p>
+        Jack and Lucas have stayed in touch since Jack moved away from NYC. Lucas visited Jack once
+        in Japan already, and hopes to be able to go back and see him again there soon.
+      </p>
+    `,
+  },
 ];
 
 @customElement('wedding-party-page')
